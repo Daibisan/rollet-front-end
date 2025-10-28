@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Private design and draft files (wireframes, requirements, sketches)
+/design-drafts/
