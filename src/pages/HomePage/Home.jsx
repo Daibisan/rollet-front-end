@@ -22,10 +22,76 @@ export default function Home() {
                 role: "PM",
             },
         ],
+        [
+            {
+                nama: "Tesss",
+                role: "FE",
+            },
+            {
+                nama: "Tes",
+                role: "Cyber",
+            },
+            {
+                nama: "Tes",
+                role: "BE",
+            },
+            {
+                nama: "Tes",
+                role: "UI/UX",
+            },
+            {
+                nama: "Tes",
+                role: "PM",
+            },
+        ],
+        [
+            {
+                nama: "Tesss",
+                role: "FE",
+            },
+            {
+                nama: "Tes",
+                role: "Cyber",
+            },
+            {
+                nama: "Tes",
+                role: "BE",
+            },
+            {
+                nama: "Tes",
+                role: "UI/UX",
+            },
+            {
+                nama: "Tes",
+                role: "PM",
+            },
+        ],
+        [
+            {
+                nama: "Tesss",
+                role: "FE",
+            },
+            {
+                nama: "Tes",
+                role: "Cyber",
+            },
+            {
+                nama: "Tes",
+                role: "BE",
+            },
+            {
+                nama: "Tes",
+                role: "UI/UX",
+            },
+            {
+                nama: "Tes",
+                role: "PM",
+            },
+        ],
     ];
 
     return (
-        <div className="lg:flex lg:pt-3">
+        <div className="mt-5 lg:flex">
             <section className="lg:flex lg:flex-3 lg:flex-col lg:gap-9">
                 <div id="logo" className="lg:flex lg:items-baseline lg:gap-2.5">
                     <div className="lingkaran-gray h-[67px] w-[77px] rounded-full bg-[#D9D9D9]"></div>
@@ -66,18 +132,18 @@ export default function Home() {
             <aside id="team-list" className="lg:flex-1 lg:pt-6">
                 <header className="relative">
                     <div className="absolute -left-15 h-[51px] w-[53px] rounded-full bg-[#B1B1B1]"></div>
-                    <h3 className="rounded-full bg-[#2F2F2F] lg:pb-2 lg:text-center lg:text-4xl text-white">
+                    <h3 className="rounded-full bg-[#2F2F2F] text-white lg:pb-2 lg:text-center lg:text-4xl">
                         Our Team
                     </h3>
                 </header>
                 <div
                     id="team-list-content"
-                    className="lg:mt-8 lg:max-h-142 lg:overflow-y-auto"
+                    className="max-h-120 lg:mt-8 lg:overflow-y-auto lg:rounded-2xl"
                 >
                     {teams.map((item, index) => (
-                        <div className="lg:mb-6 lg:rounded-2xl bg-[#00000080] lg:px-5 lg:pt-2 lg:pb-12 text-white">
+                        <div className="bg-[#00000080] text-white lg:mb-6 lg:rounded-2xl lg:px-5 lg:pt-2 lg:pb-12">
                             <h4 className="lg:text-3xl">Team {index + 1}</h4>
-                            <ol className="lg:mt-3 list-inside list-decimal lg:text-[0.8rem] font-light">
+                            <ol className="list-inside list-decimal font-light lg:mt-3 lg:text-[0.8rem]">
                                 {item.map((person, index) => (
                                     <li key={index} className="lg:mb-1">
                                         {person.nama} ({person.role})

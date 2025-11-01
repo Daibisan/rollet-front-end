@@ -4,6 +4,7 @@ import HomePage from '../pages/HomePage'
 import History from '../pages/HomePage/History'
 import Settings from '../pages/HomePage/Settings'
 import Home from "../pages/HomePage/Home";
+import LoginPage from "../pages/LoginPage";
 
 export default function index() {
     return (
@@ -14,6 +15,7 @@ export default function index() {
                 <Route path="history" element={<History />} />
                 <Route path="settings" element={<Settings />} />
             </Route>
+            <Route path="/login" element={<LoginPage />} />
         </Routes>
     );
 }
