@@ -6,7 +6,7 @@ function Navbar() {
         <>
             <div
                 id="welcome-container"
-                className="absolute w-full z-10 flex flex-col rounded-4xl bg-[#5F5F5F] pt-6 pr-5 pb-4 pl-5 text-white"
+                className="absolute w-full flex flex-col rounded-4xl bg-[#5F5F5F] pt-6 pr-5 pb-4 pl-5 text-white"
             >
                 <h2 className="mb-6 text-[32px] leading-none">
                     Welcome
