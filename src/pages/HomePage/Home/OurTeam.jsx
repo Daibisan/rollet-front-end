@@ -40,7 +40,7 @@ export default function OurTeam({ teams }) {
 
     return (
         /* Our Team Display */
-        <aside id="team-list" className="lg:flex-1 lg:pt-6">
+        <aside id="our-team" className="flex-1 pt-6">
             <header className="relative">
                 <button
                     onClick={exportCsvHandler}
@@ -48,23 +48,23 @@ export default function OurTeam({ teams }) {
                 >
                     UP
                 </button>
-                <h3 className="rounded-full bg-[#2F2F2F] text-white lg:pb-2 lg:text-center lg:text-4xl">
+                <h3 className="rounded-full bg-[#2F2F2F] text-white pb-2 text-center text-4xl">
                     Our Team
                 </h3>
             </header>
             <div
                 id="team-list-content"
-                className="max-h-120 lg:mt-8 lg:overflow-y-auto lg:rounded-2xl"
+                className="max-h-120 mt-8 overflow-y-auto rounded-2xl"
             >
                 {teams.map((item, index) => (
                     <div
                         key={index}
-                        className="bg-[#00000080] text-white lg:mb-6 lg:rounded-2xl lg:px-5 lg:pt-2 lg:pb-12"
+                        className="bg-[#00000080] text-white mb-6 rounded-2xl px-5 pt-2 pb-12"
                     >
-                        <h4 className="lg:text-3xl">Team {index + 1}</h4>
-                        <ol className="list-inside list-decimal font-light lg:mt-3 lg:text-[0.8rem]">
+                        <h4 className="text-3xl">Team {index + 1}</h4>
+                        <ol className="list-inside list-decimal font-light mt-3 text-[0.8rem]">
                             {item.map((person, i) => (
-                                <li key={i} className="lg:mb-1">
+                                <li key={i} className="mb-1">
                                     {person.person_name} ({person.person_role})
                                 </li>
                             ))}
