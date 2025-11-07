@@ -1,5 +1,5 @@
-import Routing from './Routing'
+import AppRouter from "./AppRouter";
 
 export default function App() {
-    return <Routing />;
+    return <AppRouter/>
 }

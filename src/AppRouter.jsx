@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "../pages/LandingPage"
-import HomePage from '../pages/HomePage'
-import History from '../pages/HomePage/History'
-import Settings from '../pages/HomePage/Settings'
-import Home from "../pages/HomePage/Home";
-import LoginPage from "../pages/LoginPage";
+import LandingPage from "./pages/LandingPage"
+import HomePage from './pages/HomePage'
+import History from './pages/HomePage/History'
+import Settings from './pages/HomePage/Settings'
+import Home from "./pages/HomePage/Home";
+import LoginPage from "./pages/LoginPage";
 
-export default function index() {
+export default function AppRouter() {
     return (
         <Routes>
             <Route path="/" element={<LandingPage />} />

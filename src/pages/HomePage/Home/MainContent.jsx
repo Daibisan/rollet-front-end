@@ -1,23 +1,8 @@
 import { useState } from "react";
 import Papa from "papaparse";
+import RolletLogo from '../../../components/ui/RolletLogo';
 
-export default function Home() {
-    const [teams, setTeams] = useState([
-        [
-            {
-                person_name: "----------------",
-                person_role: "-",
-            },
-            {
-                person_name: "----------------",
-                person_role: "-",
-            },
-            {
-                person_name: "----------------",
-                person_role: "-",
-            },
-        ],
-    ]);
+export default function MainContent({ setTeams }) {
     const [popUpClosed, setPopUpClosed] = useState(true);
     const [persons, setPersons] = useState([
         {
@@ -49,44 +34,6 @@ export default function Home() {
                         },
                     ];
         setPersons(newPersons);
-    }
-
-    function addPersonHandler(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        addPerson();
-
-        setPopUpClosed(true);
-        setNameInputValue("");
-        setRoleInputValue("");
-    }
-
-    function displayTeams() {
-        const newTeams = [
-            [
-                {
-                    person_name: "Dibi",
-                    person_role: "FE",
-                },
-                {
-                    person_name: "Muza",
-                    person_role: "BE",
-                },
-                
-            ],
-            [
-                {
-                    person_name: "Syan",
-                    person_role: "UI/UX",
-                },
-                {
-                    person_name: "Bariza",
-                    person_role: "PM",
-                },
-            ],
-        ];
-        setTeams(newTeams);
     }
 
     function importCsvHandler(e) {
@@ -131,51 +78,37 @@ export default function Home() {
         });
     }
 
-    function exportCsvHandler() {
-        // Check empty teams
-        if (teams[0][0].person_role === "-") {
-            alert("Teams are empty");
-        } else {
-            let csvReady_teams = [];
-            
-            // Reformat teams[] data to CSV-ready JSON
-            teams.forEach((team, i) => {
-                team.forEach((person) => {
-                    csvReady_teams.push({
-                        team: i+1,
-                        name: person.person_name,
-                        role: person.person_role,
-                    })
-                });
-            });
-
-            // PAPA unparse JSON -> CSV
-            const unparsed_teams = Papa.unparse(csvReady_teams);
-
-            // Virtual file (stored in browser's RAM)
-            const blob = new Blob([unparsed_teams], { type: "text/csv;charset=utf-8;"});
-
-            // Temp URL (for <a>'s href)
-            const url = URL.createObjectURL(blob);
-
-            // Download to user device
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = "Teams_exported.csv";
-            link.click();
-        }
+    function displayTeamsHandler() {
+        const newTeams = [
+            [
+                {
+                    person_name: "Dibi",
+                    person_role: "FE",
+                },
+                {
+                    person_name: "Muza",
+                    person_role: "BE",
+                },
+            ],
+            [
+                {
+                    person_name: "Syan",
+                    person_role: "UI/UX",
+                },
+                {
+                    person_name: "Bariza",
+                    person_role: "PM",
+                },
+            ],
+        ];
+        setTeams(newTeams);
     }
 
     return (
-        <div className="mt-5 lg:flex">
-            {/* Main content */}
+        <>
+            {/* Main-content */}
             <section className="lg:flex lg:flex-3 lg:flex-col lg:gap-9">
-                <div id="logo" className="lg:flex lg:items-baseline lg:gap-2.5">
-                    <div className="lingkaran-gray h-[67px] w-[77px] rounded-full bg-[#D9D9D9]"></div>
-                    <h1 className="font-['yellow-candy'] lg:text-5xl">
-                        Rollet
-                    </h1>
-                </div>
+                <RolletLogo/>
                 <div id="content" className="lg:flex lg:gap-20">
                     <div
                         id="add-name-container"
@@ -231,7 +164,7 @@ export default function Home() {
                         <div className="lg:flex lg:w-full lg:max-w-full lg:items-center lg:gap-2">
                             <button
                                 className="cursor-pointer rounded-full bg-[#D9D9D9] lg:px-8 lg:py-2 lg:text-center lg:text-3xl"
-                                onClick={displayTeams}
+                                onClick={displayTeamsHandler}
                             >
                                 Spin for Team 1
                             </button>
@@ -241,76 +174,82 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Our Team Display */}
-            <aside id="team-list" className="lg:flex-1 lg:pt-6">
-                <header className="relative">
-                    <button
-                        onClick={exportCsvHandler}
-                        className="absolute -left-15 flex h-[51px] w-[53px] cursor-pointer items-center justify-center rounded-full bg-[#B1B1B1]"
-                    >
-                        UP
-                    </button>
-                    <h3 className="rounded-full bg-[#2F2F2F] text-white lg:pb-2 lg:text-center lg:text-4xl">
-                        Our Team
-                    </h3>
-                </header>
-                <div
-                    id="team-list-content"
-                    className="max-h-120 lg:mt-8 lg:overflow-y-auto lg:rounded-2xl"
-                >
-                    {teams.map((item, index) => (
-                        <div className="bg-[#00000080] text-white lg:mb-6 lg:rounded-2xl lg:px-5 lg:pt-2 lg:pb-12">
-                            <h4 className="lg:text-3xl">Team {index + 1}</h4>
-                            <ol className="list-inside list-decimal font-light lg:mt-3 lg:text-[0.8rem]">
-                                {item.map((person, index) => (
-                                    <li key={index} className="lg:mb-1">
-                                        {person.person_name} (
-                                        {person.person_role})
-                                    </li>
-                                ))}
-                            </ol>
-                        </div>
-                    ))}
-                </div>
-            </aside>
+            <AddPopup
+                popUpClosed={popUpClosed}
+                setPopUpClosed={setPopUpClosed}
+                addPerson={addPerson}
+                setNameInputValue={setNameInputValue}
+                setRoleInputValue={setRoleInputValue}
+                nameInputValue={nameInputValue}
+                roleInputValue={roleInputValue}
+            />
+        </>
+    );
+}
 
-            {/* Popup add student form */}
-            {!popUpClosed && (
-                <div
-                    className="addStudent_form_popup absolute top-0 left-0 flex h-full w-full items-center justify-center bg-[#00000080]"
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        setPopUpClosed(true);
-                        setNameInputValue("");
-                        setRoleInputValue("");
-                    }}
-                >
-                    <form
-                        method="POST"
-                        className="flex w-full max-w-[337px] flex-col gap-6 font-[roboto] text-[15px]"
-                        onSubmit={addPersonHandler}
+
+
+function AddPopup({
+    popUpClosed,
+    setPopUpClosed,
+    addPerson,
+    setNameInputValue,
+    setRoleInputValue,
+    nameInputValue,
+    roleInputValue,
+}) {
+    function addPersonHandler(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        addPerson();
+
+        setPopUpClosed(true);
+        setNameInputValue("");
+        setRoleInputValue("");
+    }
+
+    return (
+        <>
+            {
+                /* Manual-Add-Popup */
+                !popUpClosed && (
+                    <div
+                        className="addStudent_form_popup absolute top-0 left-0 z-30 flex h-full w-full items-center justify-center bg-[#00000080]"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setPopUpClosed(true);
+                            setNameInputValue("");
+                            setRoleInputValue("");
+                        }}
                     >
-                        <ManualInputElm
-                            inputvalue={nameInputValue}
-                            setInputValue={setNameInputValue}
-                            inputName="person_name"
-                        />
-                        <ManualInputElm
-                            inputvalue={roleInputValue}
-                            setInputValue={setRoleInputValue}
-                            inputName="person_role"
-                        />
-                        <button
-                            type="submit"
-                            className="darumadrop-one-regular mx-auto w-max cursor-pointer rounded-full bg-[#D9D9D9] px-12 text-center text-[32px]"
-                            onClick={(e) => e.stopPropagation()}
+                        <form
+                            method="POST"
+                            className="flex w-full max-w-[337px] flex-col gap-6 font-[roboto] text-[15px]"
+                            onSubmit={addPersonHandler}
                         >
-                            Add
-                        </button>
-                    </form>
-                </div>
-            )}
-        </div>
+                            <ManualInputElm
+                                inputvalue={nameInputValue}
+                                setInputValue={setNameInputValue}
+                                inputName="person_name"
+                            />
+                            <ManualInputElm
+                                inputvalue={roleInputValue}
+                                setInputValue={setRoleInputValue}
+                                inputName="person_role"
+                            />
+                            <button
+                                type="submit"
+                                className="darumadrop-one-regular mx-auto w-max cursor-pointer rounded-full bg-[#D9D9D9] px-12 text-center text-[32px]"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                Add
+                            </button>
+                        </form>
+                    </div>
+                )
+            }
+        </>
     );
 }
 
