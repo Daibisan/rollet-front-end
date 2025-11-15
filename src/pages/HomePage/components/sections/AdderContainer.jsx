@@ -1,7 +1,7 @@
-import NameList from "./NameList";
-import ButtonList from "./ButtonList";
+import NameList from "../widgets/NameList";
+import ButtonList from "../widgets/ButtonList";
 
-export default function index({
+export default function AdderContainer({
     persons,
     setPopUpClosed,
     addPerson,

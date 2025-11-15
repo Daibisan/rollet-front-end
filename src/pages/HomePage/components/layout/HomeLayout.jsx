@@ -1,6 +1,33 @@
-import Papa from "papaparse";
+import { useState } from "react";
+import MainContent from "../sections/MainContent";
 
-export default function OurTeam({ teams }) {
+export default function HomeLayout() {
+    const [teams, setTeams] = useState([
+        [
+            {
+                person_name: "----------------",
+                person_role: "-",
+            },
+            {
+                person_name: "----------------",
+                person_role: "-",
+            },
+            {
+                person_name: "----------------",
+                person_role: "-",
+            },
+        ],
+    ]);
+
+    return (
+        <div className="mt-5 flex">
+            <MainContent setTeams={setTeams} />
+            <OurTeam teams={teams} />
+        </div>
+    );
+}
+
+function OurTeam({ teams }) {
     function exportCsvHandler() {
         // Check empty teams
         if (teams[0][0].person_role === "-") {
@@ -47,20 +74,18 @@ export default function OurTeam({ teams }) {
                 >
                     UP
                 </button>
-                <h3 className="rounded-full bg-[#2F2F2F] text-white pb-2 text-center text-4xl">
+                <h3 className="rounded-full bg-[#2F2F2F] pb-2 text-center text-4xl text-white">
                     Our Team
                 </h3>
             </header>
-            <div
-                className="max-h-120 mt-8 overflow-y-auto rounded-2xl"
-            >
+            <div className="mt-8 max-h-120 overflow-y-auto rounded-2xl">
                 {teams.map((item, index) => (
                     <div
                         key={index}
-                        className="bg-[#00000080] text-white mb-6 rounded-2xl px-5 pt-2 pb-12"
+                        className="mb-6 rounded-2xl bg-[#00000080] px-5 pt-2 pb-12 text-white"
                     >
                         <h4 className="text-3xl">Team {index + 1}</h4>
-                        <ol className="list-inside list-decimal font-light mt-3 text-[0.8rem]">
+                        <ol className="mt-3 list-inside list-decimal text-[0.8rem] font-light">
                             {item.map((person, i) => (
                                 <li key={i} className="mb-1">
                                     {person.person_name} ({person.person_role})

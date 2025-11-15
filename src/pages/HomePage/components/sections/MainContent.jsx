@@ -2,9 +2,9 @@ import { useState } from "react";
 import RolletLogo from "../../../../components/ui/RolletLogo";
 import AdderContainer from "./AdderContainer";
 import SpinnerContainer from "./SpinnerContainer";
-import AddPopup from "./AdderContainer/AddPopup";
+import AddPopup from "./AddPopup";
 
-export default function Layout({ setTeams }) {
+export default function MainContent({ setTeams }) {
     const [popUpClosed, setPopUpClosed] = useState(true);
     const [persons, setPersons] = useState([
         {
