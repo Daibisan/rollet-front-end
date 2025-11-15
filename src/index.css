@@ -1,36 +1,56 @@
 @import "tailwindcss";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
     height: 100%;
 }
 
+/* FONT */
 @font-face {
-    font-family: 'yellow-candy';
-    src: url('./assets/fonts/yellow-candy.otf');
+    font-family: "yellow-candy";
+    src: url("./assets/fonts/yellow-candy.otf");
 }
 
 @font-face {
-    font-family: 'rubik-one';
-    src: url('./assets/fonts/rubik-one.ttf');
+    font-family: "rubik-one";
+    src: url("./assets/fonts/rubik-one.ttf");
 }
 
 @font-face {
-    font-family: 'roboto';
-    src: url('./assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf');
+    font-family: "roboto";
+    src: url("./assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf");
 }
 
 .m-plus-rounded-1c-regular {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .darumadrop-one-regular {
-  font-family: "Darumadrop One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Darumadrop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* COLOR */
+@theme {
+    --color-logo-rollet: hsla(0, 0%, 0%, 1);
+    --color-main-black: hsla(0, 0%, 12%, 1);
+    --color-secondary-black: hsla(0, 0%, 18%, 1);
+
+    --color-main-gray: hsla(0, 0%, 76%, 1);
+    --color-secondary-gray: hsla(0, 0%, 33%, 1);
+
+    --color-main-blue: hsla(214, 100%, 75%, 1);
+    --color-secondary-blue: hsla(211, 100%, 91%, 1);
+
+    --color-main-red: hsla(0, 100%, 66%, 1);
 }

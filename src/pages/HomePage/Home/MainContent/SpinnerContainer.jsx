@@ -28,11 +28,9 @@ export default function SpinnerContainer({ setTeams }) {
 
     return (
         <div
-            id="spinner-container"
             className="flex flex-[1.8] flex-col justify-center gap-16"
         >
             <div
-                id="spin-display"
                 className="min-h-[236px] w-full max-w-[324px] bg-[#D9D9D9]"
             ></div>
             <div className="flex w-full max-w-full items-center gap-2">

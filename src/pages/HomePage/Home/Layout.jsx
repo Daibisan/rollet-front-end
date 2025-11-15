@@ -21,7 +21,7 @@ export default function Layout() {
     ]);
 
     return (
-        <div id="home" className="mt-5 flex">
+        <div className="mt-5 flex">
             <MainContent setTeams={setTeams} />
             <OurTeam teams={teams} />
         </div>

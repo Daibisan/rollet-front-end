@@ -39,8 +39,7 @@ export default function OurTeam({ teams }) {
     }
 
     return (
-        /* Our Team Display */
-        <aside id="our-team" className="flex-1 pt-6">
+        <aside className="flex-1 pt-6">
             <header className="relative">
                 <button
                     onClick={exportCsvHandler}
@@ -53,7 +52,6 @@ export default function OurTeam({ teams }) {
                 </h3>
             </header>
             <div
-                id="team-list-content"
                 className="max-h-120 mt-8 overflow-y-auto rounded-2xl"
             >
                 {teams.map((item, index) => (

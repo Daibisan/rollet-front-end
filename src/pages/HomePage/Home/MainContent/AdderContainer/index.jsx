@@ -12,7 +12,6 @@ export default function index({
     return (
         <>
             <div
-                id="adder-container"
                 className="flex flex-1 flex-col items-center gap-5"
             >
                 <NameList persons={persons}/>

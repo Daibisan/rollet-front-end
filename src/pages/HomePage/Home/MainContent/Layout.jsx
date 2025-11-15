@@ -42,7 +42,7 @@ export default function Layout({ setTeams }) {
         <>
             <section className="flex flex-3 flex-col gap-9">
                 <RolletLogo />
-                <div id="content" className="flex gap-20">
+                <div className="flex gap-20">
                     <AdderContainer
                         persons={persons}
                         addPerson={addPerson}

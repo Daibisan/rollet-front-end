@@ -5,7 +5,6 @@ function Navbar() {
     return (
         <>
             <div
-                id="welcome-container"
                 className="absolute w-full flex flex-col rounded-4xl bg-[#5F5F5F] pt-6 pr-5 pb-4 pl-5 text-white"
             >
                 <h2 className="mb-6 text-[32px] leading-none">
@@ -16,7 +15,7 @@ function Navbar() {
             </div>
             <nav className="relative flex flex-col rounded-4xl bg-[#D9D9D9] mt-40 pt-28 px-4 pb-13">
                 <ul >
-                    <li id="home-btn">
+                    <li>
                         <Link
                             to="/home"
                             className={`flex gap-3 rounded-full ${location.pathname === "/home" ? "bg-[#B1B1B1]" : ""} px-4.5 py-3`}
@@ -25,7 +24,7 @@ function Navbar() {
                             <p className="pt-1">Home</p>
                         </Link>
                     </li>
-                    <li id="history-btn" className="mb-50">
+                    <li className="mb-50">
                         <Link
                             to="/home/history"
                             className={`flex gap-3 rounded-full ${location.pathname === "/home/history" ? "bg-[#B1B1B1]" : ""} px-4.5 py-3`}
@@ -34,7 +33,7 @@ function Navbar() {
                             <p>History</p>
                         </Link>
                     </li>
-                    <li id="settings-btn" className="-ml-3">
+                    <li className="-ml-3">
                         <Link
                             to="/home/settings"
                             className={`flex gap-3 rounded-full ${location.pathname === "/home/settings" ? "bg-[#B1B1B1]" : ""} px-4.5 py-3 text-[20px]`}

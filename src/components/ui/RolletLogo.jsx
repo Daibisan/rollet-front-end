@@ -1,12 +1,14 @@
 export default function RolletLogo() {
     return (
-        <div
-            id="logo"
-            className="select-none lg:flex lg:items-baseline lg:gap-2.5"
-        >
-            <div className="lingkaran-gray h-[67px] w-[77px] rounded-full bg-[#D9D9D9]"></div>
-            <h1 className="font-['yellow-candy'] lg:text-5xl">Rollet</h1>
-            
+        <div className="flex gap-1 select-none">
+            <img
+                src="src/assets/img/logo/main_logo.png"
+                alt="main_logo"
+                width={"80px"}
+            />
+            <h1 className="flex items-center pt-2 font-['yellow-candy'] text-5xl">
+                Rollet
+            </h1>
         </div>
     );
 }

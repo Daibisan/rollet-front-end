@@ -3,9 +3,8 @@ import Navbar from "../../components/layout/Navbar";
 
 export default function index() {
     return (
-        <div id="body" className="flex h-full max-h-[768px] justify-center lg:px-4 relative">
+        <div className="flex h-full max-h-[768px] justify-center lg:px-4 relative">
             <div
-                id="wrapper"
                 className="darumadrop-one-regular mt-8 h-max lg:flex lg:w-full lg:max-w-[1250px] lg:gap-15"
             >
                 <aside className="lg:relative lg:flex-1">
