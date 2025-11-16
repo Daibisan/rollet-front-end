@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Private design and draft files (wireframes, requirements, sketches)
-/design-drafts/
+/dev-drafts/

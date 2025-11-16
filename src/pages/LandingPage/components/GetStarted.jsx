@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 
 export default function GetStarted() {
     return (
-        <section className="relative flex w-full select-none">
+        <section className="relative flex w-full">
             {/* Big wolf */}
-            <div className="flex flex-1 justify-center">
+            <div className="flex flex-1 justify-center select-none">
                 <img
                     src="src/assets/img/anjing_sus_melek_fix.png"
                     alt="anjing_sus_melek"
                     className="max-w-[434px]"
                     loading="lazy"
+                    draggable={false}
                 />
             </div>
 

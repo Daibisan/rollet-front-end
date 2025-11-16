@@ -28,7 +28,7 @@ export default function OurTeam() {
                             key={i}
                             className="flex w-full max-w-[220px] flex-col"
                         >
-                            <div className="bg-secondary-black h-[185px] rounded-4xl"></div>
+                            <div className="bg-secondary-black h-[185px] rounded-4xl select-none" draggable={false}></div>
                             <span className="mt-2 text-[1.3rem] leading-6">
                                 {p.name}
                             </span>

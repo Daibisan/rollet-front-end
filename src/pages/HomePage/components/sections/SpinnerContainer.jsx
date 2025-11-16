@@ -1,5 +1,4 @@
-export default function SpinnerContainer({ setTeams }) {
-    
+export default function SpinnerContainer({ setTeams, setPersons }) {
     function displayTeamsHandler() {
         const newTeams = [
             [
@@ -26,21 +25,66 @@ export default function SpinnerContainer({ setTeams }) {
         setTeams(newTeams);
     }
 
+    function refreshBtnHandler() {
+        const newTeam = [
+            [
+                {
+                    person_name: "----------------",
+                    person_role: "-",
+                },
+                {
+                    person_name: "----------------",
+                    person_role: "-",
+                },
+                {
+                    person_name: "----------------",
+                    person_role: "-",
+                },
+            ],
+        ];
+        setTeams(newTeam);
+
+        const newPersons = [
+            {
+                person_name: "----------------",
+                person_role: "-",
+            },
+        ];
+        setPersons(newPersons);
+    }
+
     return (
-        <div
-            className="flex flex-[1.8] flex-col justify-center gap-16"
-        >
-            <div
-                className="min-h-[236px] w-full max-w-[324px] bg-[#D9D9D9]"
-            ></div>
-            <div className="flex w-full max-w-full items-center gap-2">
-                <button
-                    className="cursor-pointer rounded-full bg-[#D9D9D9] px-8 py-2 text-center text-3xl"
-                    onClick={displayTeamsHandler}
-                >
-                    Spin for Team 1
-                </button>
-                <div className="h-10 w-10 rounded-full bg-[#D9D9D9]"></div>
+        // outer
+        <div className="flex flex-[1.5] justify-center">
+            {/* inner */}
+            <div className="flex flex-col justify-center gap-5 w-full max-w-[300px]">
+
+                {/* Spinning animation box*/}
+                <div className="min-h-[236px] bg-[#D9D9D9]"></div>
+
+                {/* Buttons */}
+                <div className="flex items-center gap-2 select-none">
+                    {/* Spin button */}
+                    <button
+                        className="bg-main-blue cursor-pointer rounded-full px-6 pt-3 pb-4 text-center text-3xl text-white leading-7"
+                        onClick={displayTeamsHandler}
+                    >
+                        Spin Team
+                    </button>
+
+                    {/* Refresh button */}
+                    <button
+                        className="bg-main-blue cursor-pointer rounded-full p-2"
+                        onClick={refreshBtnHandler}
+                    >
+                        <img
+                            src="src/assets/img/logo/Refresh.svg"
+                            alt="Refresh"
+                            width={"39px"}
+                            draggable={false}
+                        />
+                    </button>
+                </div>
             </div>
         </div>
     );

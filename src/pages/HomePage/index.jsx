@@ -3,18 +3,18 @@ import Navbar from "./components/layout/Navbar";
 
 export default function index() {
     return (
-        <div className="flex h-full max-h-[768px] justify-center lg:px-4 relative">
+        <div className="flex h-full max-h-[768px] justify-center px-4 relative">
             <div
-                className="darumadrop-one-regular mt-8 h-max lg:flex lg:w-full lg:max-w-[1250px] lg:gap-15"
+                className="darumadrop-one-regular mt-8 h-max flex w-full max-w-[1250px] gap-12"
             >
-                <aside className="lg:relative lg:flex-1">
+                <aside className="relative flex-1 rounded-4xl border-5 border-main-gray">
                     <Navbar />
                 </aside>
-                <main className="lg:flex-[4.55]">
+                <main className="flex-[4.55]">
                     <Outlet />
                 </main>
             </div>
-            <footer className="darumadrop-one-regular lg:absolute lg:bottom-5 lg:left-6 lg:text-[11px]">
+            <footer className="darumadrop-one-regular absolute bottom-4 left-6 text-[11px]">
                 version 0.0.0.1
             </footer>
         </div>

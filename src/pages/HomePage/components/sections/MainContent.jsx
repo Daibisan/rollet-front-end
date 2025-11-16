@@ -39,28 +39,26 @@ export default function MainContent({ setTeams }) {
     }
 
     return (
-        <>
-            <section className="flex flex-3 flex-col gap-9">
-                <RolletLogo />
-                <div className="flex gap-20">
-                    <AdderContainer
-                        persons={persons}
-                        addPerson={addPerson}
+        <section className="flex flex-3 flex-col gap-12">
+            <RolletLogo />
+            <div className="flex gap-6">
+                <AdderContainer
+                    persons={persons}
+                    addPerson={addPerson}
+                    setPopUpClosed={setPopUpClosed}
+                >
+                    <AddPopup
+                        popUpClosed={popUpClosed}
                         setPopUpClosed={setPopUpClosed}
-                    >
-                        <AddPopup
-                            popUpClosed={popUpClosed}
-                            setPopUpClosed={setPopUpClosed}
-                            setNameInputValue={setNameInputValue}
-                            setRoleInputValue={setRoleInputValue}
-                            nameInputValue={nameInputValue}
-                            roleInputValue={roleInputValue}
-                            addPerson={addPerson}
-                        />
-                    </AdderContainer>
-                    <SpinnerContainer setTeams={setTeams} />
-                </div>
-            </section>
-        </>
+                        setNameInputValue={setNameInputValue}
+                        setRoleInputValue={setRoleInputValue}
+                        nameInputValue={nameInputValue}
+                        roleInputValue={roleInputValue}
+                        addPerson={addPerson}
+                    />
+                </AdderContainer>
+                <SpinnerContainer setTeams={setTeams} setPersons={setPersons} />
+            </div>
+        </section>
     );
 }

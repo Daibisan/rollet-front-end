@@ -25,7 +25,7 @@ export default function AddPopup({
                 /* Manual-Add-Popup */
                 !popUpClosed && (
                     <div
-                        className="addStudent_form_popup absolute top-0 left-0 z-30 flex h-full w-full items-center justify-center bg-[#00000080]"
+                        className="absolute top-0 left-0 z-30 flex h-screen w-full items-center justify-center bg-[#00000080]"
                         onClick={(e) => {
                             e.stopPropagation();
                             setPopUpClosed(true);
@@ -77,7 +77,7 @@ function ManualInputElm({ inputvalue, setInputValue, inputName }) {
             maxLength={25}
             value={inputvalue}
             onChange={(e) => setInputValue(e.target.value)}
-            pattern="^[a-zA-Z0-9]*$"
+            pattern="^[a-zA-Z0-9 ]*$"
             autoComplete="off"
         />
     );

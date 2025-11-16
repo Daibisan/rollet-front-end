@@ -5,6 +5,7 @@ export default function RolletLogo() {
                 src="src/assets/img/logo/main_logo.png"
                 alt="main_logo"
                 width={"80px"}
+                draggable={false}
             />
             <h1 className="flex items-center pt-2 font-['yellow-candy'] text-5xl">
                 Rollet

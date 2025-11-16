@@ -24,6 +24,7 @@ export default function LandingPage() {
                         alt="clouds"
                         className="mt-12 scale-200 pr-20"
                         loading="lazy"
+                        draggable={false}
                     />
 
                     {/* Wolf melet */}
@@ -33,6 +34,7 @@ export default function LandingPage() {
                         width={"172px"}
                         className="absolute right-0 bottom-0"
                         loading="lazy"
+                        draggable={false}
                     />
 
                     {/* App Version */}
@@ -43,7 +45,7 @@ export default function LandingPage() {
 
                 <footer
                     id="about-rollet"
-                    className="relative mt-70 flex flex-col gap-12 pt-15 select-none"
+                    className="relative mt-70 flex flex-col gap-12 pt-15"
                 >
                     <AboutRollet />
                     <OurTeam />
@@ -53,15 +55,17 @@ export default function LandingPage() {
                         src="src/assets/img/cloud.png"
                         alt="cloud"
                         width={"440px"}
-                        className="absolute -top-33 -left-77"
+                        className="absolute -top-33 -left-77 select-none"
                         loading="lazy"
+                        draggable={false}
                     />
                     <img
                         src="src/assets/img/cloud.png"
                         alt="cloud"
                         width={"440px"}
-                        className="absolute top-23 -right-77"
+                        className="absolute top-23 -right-77 select-none"
                         loading="lazy"
+                        draggable={false}
                     />
                 </footer>
             </div>

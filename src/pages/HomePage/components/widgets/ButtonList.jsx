@@ -46,17 +46,20 @@ export default function ButtonList({ setPopUpClosed, addPerson }) {
 
     return (
         <div className="flex items-center gap-2">
+            {/* Add button */}
             <button
-                className="w-max cursor-pointer rounded-full bg-[#D9D9D9] px-15 py-4 text-center text-3xl"
+                className="w-max cursor-pointer rounded-full bg-main-blue px-15 py-3 text-center text-3xl text-white"
                 onClick={() => setPopUpClosed(false)}
             >
                 Add
             </button>
+
+            {/* Upload button */}
             <label
                 htmlFor="csv-input"
-                className="flex h-[55px] w-[58px] cursor-pointer items-center justify-center rounded-full bg-[#D9D9D9]"
+                className="flex p-2 cursor-pointer items-center justify-center rounded-full bg-main-blue"
             >
-                CSV
+                <img src="src/assets/img/logo/Upload.svg" alt="Upload" width={"36px"} draggable={false}/>
             </label>
             <input
                 id="csv-input"

@@ -10,14 +10,16 @@ export default function AdderContainer({
     
 
     return (
-        <>
+        // outer
+        <div className="flex-1 flex justify-center select-none">
+            {/* inner */}
             <div
-                className="flex flex-1 flex-col items-center gap-5"
+                className="flex w-max flex-col items-center gap-5"
             >
                 <NameList persons={persons}/>
                 <ButtonList setPopUpClosed={setPopUpClosed} addPerson={addPerson}/>
             </div>
             {children}
-        </>
+        </div>
     );
 }
