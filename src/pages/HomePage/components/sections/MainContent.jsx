@@ -41,6 +41,8 @@ export default function MainContent({ setTeams }) {
     return (
         <section className="flex flex-3 flex-col gap-12">
             <RolletLogo />
+
+            {/* Content */}
             <div className="flex gap-6">
                 <AdderContainer
                     persons={persons}

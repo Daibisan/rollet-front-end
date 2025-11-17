@@ -7,7 +7,6 @@ export default function AddPopup({
     nameInputValue,
     roleInputValue,
 }) {
-    
     function addPersonHandler(e) {
         e.preventDefault();
         e.stopPropagation();

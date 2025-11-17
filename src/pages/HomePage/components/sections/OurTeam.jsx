@@ -1,57 +1,23 @@
-import Papa from "papaparse";
+import download_logo from '@/assets/img/logo/Download.svg';
+import exportCsvHandler from "@/utils/csv__utils/exportCsvHandler";
 
 export default function OurTeam({ teams }) {
-    function exportCsvHandler() {
-        // Check empty teams
-        if (teams[0][0].person_role === "-") {
-            alert("Teams are empty");
-        } else {
-            let csvReady_teams = [];
-
-            // Reformat teams[] data to CSV-ready JSON
-            teams.forEach((team, i) => {
-                team.forEach((person) => {
-                    csvReady_teams.push({
-                        team: i + 1,
-                        name: person.person_name,
-                        role: person.person_role,
-                    });
-                });
-            });
-
-            // PAPA unparse JSON -> CSV
-            const unparsed_teams = Papa.unparse(csvReady_teams);
-
-            // Virtual file (stored in browser's RAM)
-            const blob = new Blob([unparsed_teams], {
-                type: "text/csv;charset=utf-8;",
-            });
-
-            // Temp URL (for <a>'s href)
-            const url = URL.createObjectURL(blob);
-
-            // Download to user device
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = "Teams_exported.csv";
-            link.click();
-        }
-    }
-
     return (
         <aside className="flex-[1.1] pt-6">
             {/* Our team header */}
-            <header className="relative select-none">
+            <header className="relative">
                 {/* Donwload btn */}
                 <button
-                    onClick={exportCsvHandler}
+                    onClick={()=>exportCsvHandler(teams)}
                     className="bg-main-blue absolute -left-14 flex cursor-pointer items-center justify-center rounded-full p-2"
                 >
                     <img
-                        src="src/assets/img/logo/Download.svg"
+                        src={download_logo}
                         alt="Donwload"
                         width={"32px"}
                         draggable={false}
+                        loading="lazy"
+                        className='select-none'
                     />
                 </button>
 

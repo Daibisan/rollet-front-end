@@ -11,7 +11,7 @@ export default function AdderContainer({
 
     return (
         // outer
-        <div className="flex-1 flex justify-center select-none">
+        <div className="flex-1 flex justify-center">
             {/* inner */}
             <div
                 className="flex w-max flex-col items-center gap-5"

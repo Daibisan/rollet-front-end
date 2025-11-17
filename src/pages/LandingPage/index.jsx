@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import RolletLogo from "../../components/ui/RolletLogo";
+import RolletLogo from "@/components/ui/RolletLogo";
 import OurTeam from "./components/OurTeam";
 import GetStarted from "./components/GetStarted";
 import AboutRollet from "./components/AboutRollet";

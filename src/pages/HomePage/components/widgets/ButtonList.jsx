@@ -1,4 +1,5 @@
 import Papa from "papaparse";
+import upload_icon from '@/assets/img/logo/Upload.svg';
 
 export default function ButtonList({ setPopUpClosed, addPerson }) {
     
@@ -57,9 +58,9 @@ export default function ButtonList({ setPopUpClosed, addPerson }) {
             {/* Upload button */}
             <label
                 htmlFor="csv-input"
-                className="flex p-2 cursor-pointer items-center justify-center rounded-full bg-main-blue"
+                className="flex p-2 cursor-pointer items-center justify-center rounded-full bg-main-blue select-none"
             >
-                <img src="src/assets/img/logo/Upload.svg" alt="Upload" width={"36px"} draggable={false}/>
+                <img src={upload_icon} alt="Upload" width={"36px"} draggable={false}/>
             </label>
             <input
                 id="csv-input"

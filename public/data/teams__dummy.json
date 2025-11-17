@@ -1,0 +1,42 @@
+[
+    [
+        {
+            "person_name": "Dibi",
+            "person_role": "FE"
+        },
+        {
+            "person_name": "Muza",
+            "person_role": "BE"
+        }
+    ],
+    [
+        {
+            "person_name": "Syan",
+            "person_role": "UI/UX"
+        },
+        {
+            "person_name": "Bariza",
+            "person_role": "PM"
+        }
+    ],
+    [
+        {
+            "person_name": "Dibi",
+            "person_role": "FE"
+        },
+        {
+            "person_name": "Muza",
+            "person_role": "BE"
+        }
+    ],
+    [
+        {
+            "person_name": "Syan",
+            "person_role": "UI/UX"
+        },
+        {
+            "person_name": "Bariza",
+            "person_role": "PM"
+        }
+    ]
+]

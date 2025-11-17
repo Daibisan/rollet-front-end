@@ -1,27 +1,9 @@
+import refresh_icon from "@/assets/img/logo/Refresh.svg";
+import fetchTeams from "@/services/teams";
+
 export default function SpinnerContainer({ setTeams, setPersons }) {
-    function displayTeamsHandler() {
-        const newTeams = [
-            [
-                {
-                    person_name: "Dibi",
-                    person_role: "FE",
-                },
-                {
-                    person_name: "Muza",
-                    person_role: "BE",
-                },
-            ],
-            [
-                {
-                    person_name: "Syan",
-                    person_role: "UI/UX",
-                },
-                {
-                    person_name: "Bariza",
-                    person_role: "PM",
-                },
-            ],
-        ];
+    async function displayTeamsHandler() {
+        const newTeams = await fetchTeams();
         setTeams(newTeams);
     }
 
@@ -57,19 +39,18 @@ export default function SpinnerContainer({ setTeams, setPersons }) {
         // outer
         <div className="flex flex-[1.5] justify-center">
             {/* inner */}
-            <div className="flex flex-col justify-center gap-5 w-full max-w-[300px]">
-
+            <div className="flex w-full max-w-[324px] flex-col justify-center gap-5">
                 {/* Spinning animation box*/}
                 <div className="min-h-[236px] bg-[#D9D9D9]"></div>
 
                 {/* Buttons */}
-                <div className="flex items-center gap-2 select-none">
+                <div className="flex items-center gap-2">
                     {/* Spin button */}
                     <button
-                        className="bg-main-blue cursor-pointer rounded-full px-6 pt-3 pb-4 text-center text-3xl text-white leading-7"
+                        className="bg-main-blue cursor-pointer rounded-full px-5 pt-3 pb-4 text-center text-3xl leading-7 text-white"
                         onClick={displayTeamsHandler}
                     >
-                        Spin Team
+                        Randomize Team
                     </button>
 
                     {/* Refresh button */}
@@ -78,10 +59,11 @@ export default function SpinnerContainer({ setTeams, setPersons }) {
                         onClick={refreshBtnHandler}
                     >
                         <img
-                            src="src/assets/img/logo/Refresh.svg"
+                            src={refresh_icon}
                             alt="Refresh"
                             width={"39px"}
                             draggable={false}
+                            className="select-none"
                         />
                     </button>
                 </div>

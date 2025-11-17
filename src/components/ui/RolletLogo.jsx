@@ -1,8 +1,10 @@
+import main_logo from '@/assets/img/logo/main_logo.png';
+
 export default function RolletLogo() {
     return (
-        <div className="flex gap-1 select-none">
+        <div className="flex gap-1 select-non h-[69px]">
             <img
-                src="src/assets/img/logo/main_logo.png"
+                src={main_logo}
                 alt="main_logo"
                 width={"80px"}
                 draggable={false}
