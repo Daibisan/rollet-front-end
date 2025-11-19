@@ -1,13 +1,13 @@
 import { useState } from "react";
-import DeletePopup from "../sections/DeletePopup";
 import HistoryList from "../widgets/HistoryList";
+import ConfirmationPopup from "../sections/ConfirmationPopup";
 
 export default function HistoryLayout() {
-    const [deletePopup, setDeletePopup] = useState(false);
+    const [isShowing, setIsShowing] = useState(false);
 
     function deleteBtnHandler(e) {
         console.log(e.currentTarget.dataset.index);
-        setDeletePopup(true);
+        setIsShowing(true);
     }
 
     return (
@@ -17,9 +17,10 @@ export default function HistoryLayout() {
                     <HistoryList deleteBtnHandler={deleteBtnHandler} />
                 </ul>
             </div>
-            <DeletePopup
-                setDeletePopup={setDeletePopup}
-                deletePopup={deletePopup}
+            <ConfirmationPopup
+                setIsShowing={setIsShowing}
+                isShowing={isShowing}
+                type={"deleteHistory"}
             />
         </>
     );

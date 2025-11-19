@@ -37,10 +37,10 @@ export default function NavbarList() {
                     <p className="flex items-center">History</p>
                 </Link>
             </li>
-            <li className="-ml-3">
+            <li className="-ml-1">
                 <Link
                     to="/home/settings"
-                    className={`flex gap-1 rounded-full ${location.pathname === "/home/settings" ? "bg-secondary-blue" : ""} px-4.5 py-3 text-[20px]`}
+                    className={`flex gap-1 rounded-full ${location.pathname === "/home/settings" ? "bg-secondary-blue" : ""} px-4 py-2 text-[20px]`}
                 >
                     <img
                         src={settings_icon}
