@@ -1,19 +1,19 @@
 import Papa from "papaparse";
 
-export default function exportCsvHandler(teams, history_index = null) {
+export default function exportCsvHandler(newTeams, history_index = null) {
     // Check empty teams
-    if (teams[0][0].person_role === "-") {
+    if (newTeams.teams[0].members[0].role === "-") {
         alert("Teams are empty");
     } else {
         let csvReady_teams = [];
 
         // Reformat teams[] data to CSV-ready JSON
-        teams.forEach((team, i) => {
-            team.forEach((person) => {
+        newTeams.teams.forEach((team, i) => {
+            team.members.forEach((person) => {
                 csvReady_teams.push({
                     team: i + 1,
-                    name: person.person_name,
-                    role: person.person_role,
+                    name: person.name,
+                    role: person.role,
                 });
             });
         });

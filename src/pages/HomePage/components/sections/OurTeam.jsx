@@ -1,14 +1,36 @@
-import download_logo from '@/assets/img/logo/Download.svg';
+import download_logo from "@/assets/img/logo/Download.svg";
 import exportCsvHandler from "@/utils/csv__utils/exportCsvHandler";
 
-export default function OurTeam({ teams }) {
+export default function OurTeam({ teams : newTeams }) {
+    //     {
+    //     "teams": [
+    //         {
+    //             "team": 1,
+    //             "members": [
+    //                 {
+    //                     "id": 0,
+    //                     "name": "Alice",
+    //                     "role": "Backend Developer",
+    //                     "team": 1
+    //                 },
+    //                 {
+    //                     "id": 0,
+    //                     "name": "Bob",
+    //                     "role": "Frontend Developer",
+    //                     "team": 1
+    //                 }
+    //             ]
+    //         }
+    //     ],
+    //     "total": 2
+    // }
     return (
         <aside className="flex-[1.1] pt-6">
             {/* Our team header */}
             <header className="relative">
                 {/* Donwload btn */}
                 <button
-                    onClick={()=>exportCsvHandler(teams)}
+                    onClick={() => exportCsvHandler(newTeams)}
                     className="bg-main-blue absolute -left-14 flex cursor-pointer items-center justify-center rounded-full p-2"
                 >
                     <img
@@ -17,7 +39,7 @@ export default function OurTeam({ teams }) {
                         width={"32px"}
                         draggable={false}
                         loading="lazy"
-                        className='select-none'
+                        className="select-none"
                     />
                 </button>
 
@@ -28,16 +50,16 @@ export default function OurTeam({ teams }) {
 
             {/* Team lists */}
             <div className="mt-8 max-h-120 overflow-y-auto rounded-2xl">
-                {teams.map((item, index) => (
+                {newTeams.teams.map((item, index) => (
                     <div
                         key={index}
                         className="bg-secondary-blue mb-6 rounded-2xl px-5 pt-2 pb-12 text-white"
                     >
                         <h4 className="text-3xl">Team {index + 1}</h4>
                         <ol className="mt-3 list-inside list-decimal text-[0.8rem] font-light">
-                            {item.map((person, i) => (
+                            {item.members.map((person, i) => (
                                 <li key={i} className="mb-1">
-                                    {person.person_name} ({person.person_role})
+                                    {person.name} ({person.role})
                                 </li>
                             ))}
                         </ol>

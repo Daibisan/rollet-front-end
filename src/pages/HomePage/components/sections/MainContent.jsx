@@ -59,7 +59,7 @@ export default function MainContent({ setTeams }) {
                         addPerson={addPerson}
                     />
                 </AdderContainer>
-                <SpinnerContainer setTeams={setTeams} setPersons={setPersons} />
+                <SpinnerContainer setTeams={setTeams} setPersons={setPersons} persons={persons} />
             </div>
         </section>
     );

@@ -1,29 +1,35 @@
 import refresh_icon from "@/assets/img/logo/Refresh.svg";
-import fetchTeams from "@/services/teams";
+import randomize from "@/services/teams";
 
-export default function SpinnerContainer({ setTeams, setPersons }) {
+export default function SpinnerContainer({ setTeams, setPersons, persons }) {
     async function displayTeamsHandler() {
-        const newTeams = await fetchTeams();
-        setTeams(newTeams);
+        const result = await randomize(persons);
+        setTeams(result);
     }
 
     function refreshBtnHandler() {
-        const newTeam = [
-            [
+        const newTeam = {
+            teams: [
                 {
-                    person_name: "----------------",
-                    person_role: "-",
-                },
-                {
-                    person_name: "----------------",
-                    person_role: "-",
-                },
-                {
-                    person_name: "----------------",
-                    person_role: "-",
+                    team: 1,
+                    members: [
+                        {
+                            id: 0,
+                            name: "----------------",
+                            role: "-",
+                            team: 1,
+                        },
+                        {
+                            id: 0,
+                            name: "----------------",
+                            role: "-",
+                            team: 1,
+                        },
+                    ],
                 },
             ],
-        ];
+            total: 1,
+        };
         setTeams(newTeam);
 
         const newPersons = [
