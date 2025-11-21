@@ -53,6 +53,7 @@ body,
 
     --color-main-gray: hsla(0, 0%, 76%, 1);
     --color-secondary-gray: hsla(0, 0%, 33%, 1);
+    --color-third-gray: hsla(0, 0%, 85%, 1);
 
     --color-main-blue: hsla(214, 100%, 75%, 1);
     --color-secondary-blue: hsla(211, 100%, 91%, 1);
@@ -60,4 +61,6 @@ body,
     --color-main-red: hsla(0, 100%, 66%, 1);
 
     --color-main-green: hsla(135, 59%, 49%, 1);
+
+    --color-main-blue: hsla(217, 86%, 60%, 1);
 }

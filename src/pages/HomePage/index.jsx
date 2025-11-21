@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
+import AppVersion from "../../components/ui/AppVersion";
 
 export default function index() {
     return (
@@ -14,9 +15,7 @@ export default function index() {
                     <Outlet />
                 </main>
             </div>
-            <footer className="darumadrop-one-regular absolute bottom-4 left-6 text-[11px]">
-                version 0.0.0.1
-            </footer>
+            <AppVersion/>
         </div>
     );
 }

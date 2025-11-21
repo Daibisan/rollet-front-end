@@ -3,13 +3,14 @@ import RolletLogo from "@/components/ui/RolletLogo";
 import OurTeam from "./components/OurTeam";
 import GetStarted from "./components/GetStarted";
 import AboutRollet from "./components/AboutRollet";
+import Cloud from "../../components/ui/Cloud";
 
 export default function LandingPage() {
     return (
         // Body
-        <div className="relative flex justify-center overflow-x-hidden px-4 py-6">
+        <div className="relative flex justify-center overflow-x-hidden px-16 py-8">
             {/* Wrapper */}
-            <div className="w-full max-w-[1200px] font-[rubik-one]">
+            <div className="font-[rubik-one]">
                 <header className="mb-8 flex items-center justify-between">
                     <RolletLogo />
                     <LoginBtn />
@@ -22,7 +23,7 @@ export default function LandingPage() {
                     <img
                         src="src/assets/img/clouds.png"
                         alt="clouds"
-                        className="mt-12 scale-200 pr-20"
+                        className="mt-15 scale-200 pr-20"
                         loading="lazy"
                         draggable={false}
                     />
@@ -38,35 +39,21 @@ export default function LandingPage() {
                     />
 
                     {/* App Version */}
-                    <div className="darumadrop-one-regular absolute top-185 left-5 z-30">
+                    <div className="darumadrop-one-regular absolute top-182 left-5 z-30">
                         version 0.0.0.1
                     </div>
                 </main>
 
                 <footer
                     id="about-rollet"
-                    className="relative mt-70 flex flex-col gap-12 pt-15"
+                    className="relative mt-80 flex flex-col gap-12 pt-15"
                 >
                     <AboutRollet />
                     <OurTeam />
 
                     {/* Small Clouds */}
-                    <img
-                        src="src/assets/img/cloud.png"
-                        alt="cloud"
-                        width={"440px"}
-                        className="absolute -top-33 -left-77 select-none"
-                        loading="lazy"
-                        draggable={false}
-                    />
-                    <img
-                        src="src/assets/img/cloud.png"
-                        alt="cloud"
-                        width={"440px"}
-                        className="absolute top-23 -right-77 select-none"
-                        loading="lazy"
-                        draggable={false}
-                    />
+                    <Cloud width={"440px"} abs_pos={"-top-10 -left-77"}/>
+                    <Cloud width={"440px"} abs_pos={"top-23 -right-77"}/>
                 </footer>
             </div>
         </div>

@@ -11,7 +11,7 @@ export default function SettingsLayout() {
     const navigate = useNavigate();
 
     return (
-        <div className="flex h-full border">
+        <div className="flex h-full">
             {/* Button List */}
             <div className="mt-35 flex-[1.3]">
                 {/* dark mode btn section */}
@@ -67,13 +67,13 @@ export default function SettingsLayout() {
             </div>
 
             {/* BIG DOG IMAGE */}
-            <div className="flex flex-2 items-end justify-end border">
+            <div className="flex flex-2 items-end justify-end">
                 <img
                     src={anjing_merem}
                     alt="anjing_merem"
                     width={"400px"}
                     draggable={false}
-                    className="border select-none"
+                    className="select-none"
                     loading="lazy"
                 />
             </div>
