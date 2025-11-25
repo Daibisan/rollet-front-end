@@ -21,7 +21,7 @@ export default function OurTeam() {
     return (
         <div className="mx-12 pb-15 text-center">
             <h2 className="text-main-black mb-8 text-6xl">Our Team</h2>
-            <ul className="flex justify-around">
+            <ul className="flex justify-around gap-2">
                 {ourNames.map((p, i) => {
                     return (
                         <li

@@ -1,354 +1,623 @@
 [
-    [
-        [
+    {
+        "teams": [
             {
-                "person_name": "tes111",
-                "person_role": "rollet"
+                "team": 1,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Name",
+                        "role": "Role",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 1
+                    }
+                ]
             },
             {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 2,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 2
+                    }
+                ]
             }
         ],
-        [
+        "total": 9
+    },
+    {
+        "teams": [
             {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 1,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Name",
+                        "role": "Role",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 1
+                    }
+                ]
             },
             {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 2,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 2
+                    }
+                ]
             }
         ],
-        [
+        "total": 9
+    },
+    {
+        "teams": [
             {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 1,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Name",
+                        "role": "Role",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 1
+                    }
+                ]
             },
             {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ]
-    ],
-    [
-        [
-            {
-                "person_name": "tes111",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ],
-        [
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ],
-        [
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ]
-    ],
-    [
-        [
-            {
-                "person_name": "tes111",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 2,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 2
+                    }
+                ]
             }
         ],
-        [
+        "total": 9
+    },
+    {
+        "teams": [
             {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 1,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Name",
+                        "role": "Role",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 1
+                    }
+                ]
             },
             {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 2,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 2
+                    }
+                ]
             }
         ],
-        [
+        "total": 9
+    },
+    {
+        "teams": [
             {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 1,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Name",
+                        "role": "Role",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 1
+                    }
+                ]
             },
             {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ]
-    ],
-    [
-        [
-            {
-                "person_name": "tes111",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ],
-        [
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ],
-        [
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ]
-    ],
-    [
-        [
-            {
-                "person_name": "tes111",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 2,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 2
+                    }
+                ]
             }
         ],
-        [
+        "total": 9
+    },
+    {
+        "teams": [
             {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 1,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Name",
+                        "role": "Role",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 1
+                    }
+                ]
             },
             {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 2,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 2
+                    }
+                ]
             }
         ],
-        [
+        "total": 9
+    },
+    {
+        "teams": [
             {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 1,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Name",
+                        "role": "Role",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 1
+                    }
+                ]
             },
             {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ]
-    ],
-    [
-        [
-            {
-                "person_name": "tes111",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ],
-        [
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ],
-        [
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ]
-    ],
-    [
-        [
-            {
-                "person_name": "tes111",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 2,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 2
+                    }
+                ]
             }
         ],
-        [
+        "total": 9
+    },
+    {
+        "teams": [
             {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 1,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Name",
+                        "role": "Role",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 1
+                    }
+                ]
             },
             {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 2,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 2
+                    }
+                ]
             }
         ],
-        [
+        "total": 9
+    },
+    {
+        "teams": [
             {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 1,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Name",
+                        "role": "Role",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 1
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 1
+                    }
+                ]
             },
             {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ]
-    ],
-    [
-        [
-            {
-                "person_name": "tes111",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
+                "team": 2,
+                "members": [
+                    {
+                        "id": 0,
+                        "name": "Bariza",
+                        "role": "PM",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Dibi",
+                        "role": "FE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Muza",
+                        "role": "BE",
+                        "team": 2
+                    },
+                    {
+                        "id": 0,
+                        "name": "Syan",
+                        "role": "UI/UX",
+                        "team": 2
+                    }
+                ]
             }
         ],
-        [
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ],
-        [
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            },
-            {
-                "person_name": "tes",
-                "person_role": "rollet"
-            }
-        ]
-    ]
+        "total": 9
+    }
 ]

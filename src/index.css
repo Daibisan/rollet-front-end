@@ -6,10 +6,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-main-bg: hsla(0, 0%, 95%, 1);
+}
+
 html,
 body,
 #root {
     height: 100%;
+    background-color: var(--color-main-bg);
 }
 
 /* FONT */
@@ -48,6 +53,7 @@ body,
 /* COLOR */
 @theme {
     --color-logo-rollet: hsla(0, 0%, 0%, 1);
+
     --color-main-black: hsla(0, 0%, 12%, 1);
     --color-secondary-black: hsla(0, 0%, 18%, 1);
 

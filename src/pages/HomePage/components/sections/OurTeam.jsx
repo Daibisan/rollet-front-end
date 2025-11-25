@@ -53,7 +53,7 @@ export default function OurTeam({ teams : newTeams }) {
                 {newTeams.teams.map((item, index) => (
                     <div
                         key={index}
-                        className="bg-secondary-blue mb-6 rounded-2xl px-5 pt-2 pb-12 text-white"
+                        className="bg-secondary-blue mb-6 rounded-2xl px-5 pt-2 pb-12 text-secondary-black"
                     >
                         <h4 className="text-3xl">Team {index + 1}</h4>
                         <ol className="mt-3 list-inside list-decimal text-[0.8rem] font-light">

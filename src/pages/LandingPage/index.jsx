@@ -8,7 +8,7 @@ import Cloud from "../../components/ui/Cloud";
 export default function LandingPage() {
     return (
         // Body
-        <div className="relative flex justify-center overflow-x-hidden px-16 py-8">
+        <div className="relative flex justify-center overflow-x-hidden px-16 py-8 bg-main-bg">
             {/* Wrapper */}
             <div className="font-[rubik-one]">
                 <header className="mb-8 flex items-center justify-between">

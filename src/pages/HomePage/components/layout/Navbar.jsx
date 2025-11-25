@@ -6,11 +6,11 @@ export default function Navbar() {
     return (
         <>
             {/* header and logo */}
-            <div className="bg-secondary-blue absolute z-30 flex w-full flex-col rounded-3xl pt-6 pr-5 pl-5 text-white">
+            <div className="bg-secondary-blue absolute z-30 flex w-full flex-col rounded-3xl pt-6 pr-5 pl-5 text-secondary-black">
                 {/* welcome [name] */}
                 <h2 className="mb-6 text-[32px] leading-none">
                     Welcome
-                    <span className="block text-2xl">[name]</span>
+                    <span className="block text-2xl">Guest</span>
                 </h2>
 
                 {/* dog image */}

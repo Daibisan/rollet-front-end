@@ -5,7 +5,7 @@ import ekor_anjing from "@/assets/img/ekor_anjing.svg";
 export default function DogImages({ face_pos, hands_pos, tail_pos }) {
     return (
         <>
-            <div className={`absolute -z-10 select-none ${face_pos}`}>
+            <div className={`absolute select-none ${face_pos}`}>
                 <img
                     src={anjing_muka_datar}
                     alt="anjing_muka_datar"
@@ -15,7 +15,7 @@ export default function DogImages({ face_pos, hands_pos, tail_pos }) {
                 />
             </div>
 
-            <div className={`absolute -top-6 select-none ${hands_pos}`}>
+            <div className={`absolute z-20 -top-6 select-none ${hands_pos}`}>
                 <img
                     src={tangan_anjing}
                     alt="anjing_muka_datar"
@@ -24,7 +24,7 @@ export default function DogImages({ face_pos, hands_pos, tail_pos }) {
                     draggable={false}
                 />
             </div>
-            <div className={`absolute -z-10 select-none ${tail_pos}`}>
+            <div className={`absolute select-none ${tail_pos}`}>
                 <img
                     src={ekor_anjing}
                     alt="anjing_muka_datar"

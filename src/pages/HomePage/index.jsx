@@ -8,7 +8,7 @@ export default function index() {
             <div
                 className="darumadrop-one-regular mt-8 h-max flex w-full max-w-[1250px] gap-12"
             >
-                <aside className="relative max-w-[220px] w-full rounded-4xl border-5 border-main-gray">
+                <aside className="relative max-w-[220px] w-full rounded-4xl border-5 border-main-gray bg-white">
                     <Navbar />
                 </aside>
                 <main className="w-full">

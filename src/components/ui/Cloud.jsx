@@ -6,7 +6,7 @@ export default function Cloud({width, abs_pos}) {
             src={cloud}
             alt="cloud"
             width={width}
-            className={`absolute pointer-events-none select-none -z-20 ${abs_pos}`}
+            className={`absolute pointer-events-none select-none ${abs_pos}`}
             loading="lazy"
             draggable={false}
         />
