@@ -3,7 +3,9 @@ import RolletLogo from "@/components/ui/RolletLogo";
 import OurTeam from "./components/OurTeam";
 import GetStarted from "./components/GetStarted";
 import AboutRollet from "./components/AboutRollet";
-import Cloud from "../../components/ui/Cloud";
+import Cloud from "@/components/ui/Cloud";
+import Clouds from "@/assets/img/clouds.png";
+import anjing_melet from "@/assets/img/anjing_melet.png";
 
 export default function LandingPage() {
     return (
@@ -21,7 +23,7 @@ export default function LandingPage() {
 
                     {/* Long big Clouds */}
                     <img
-                        src="src/assets/img/clouds.png"
+                        src={Clouds}
                         alt="clouds"
                         className="mt-15 scale-200 pr-20"
                         loading="lazy"
@@ -30,7 +32,7 @@ export default function LandingPage() {
 
                     {/* Wolf melet */}
                     <img
-                        src="src/assets/img/anjing_melet.png"
+                        src={anjing_melet}
                         alt="anjing_melet"
                         width={"172px"}
                         className="absolute right-0 bottom-0"

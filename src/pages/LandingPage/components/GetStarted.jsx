@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import anjing_sus_melek_fix from "@/assets/img/anjing_sus_melek_fix.png";
+
 
 export default function GetStarted() {
     return (
@@ -6,7 +8,7 @@ export default function GetStarted() {
             {/* Big wolf */}
             <div className="flex flex-1 justify-center select-none">
                 <img
-                    src="src/assets/img/anjing_sus_melek_fix.png"
+                    src={anjing_sus_melek_fix}
                     alt="anjing_sus_melek"
                     className="max-w-[400px]"
                     draggable={false}
