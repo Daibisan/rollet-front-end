@@ -1,15 +1,12 @@
 import main_logo from "@/assets/img/logo/main_logo.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function RolletLogo({ layoutType }) {
-    const location = useLocation();
-    const isLoginPage = layoutType === "login";
-
+export default function RolletLogo() {
     return (
         <div>
             <Link
-                to={isLoginPage ? "/" : location.pathname}
-                className={`flex h-[69px] gap-1 select-none ${isLoginPage ? "" : "cursor-default"} w-max`}
+                to="/"
+                className={`flex h-[69px] gap-1 select-none w-max`}
             >
                 <img
                     src={main_logo}
