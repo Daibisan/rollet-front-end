@@ -1,6 +1,6 @@
 import { API_BASE_URL } from "@/config/api.js";
 
-export default async function randomize(persons) {
+export default async function randomize(persons, team_count) {
     //     {
     //     "people": [
     //         { "name": "Alice", "role": "Backend Developer" },
@@ -16,12 +16,12 @@ export default async function randomize(persons) {
     });
     const data = {
         people: newPersons,
-        team_count: 2,
+        team_count
     };
     // console.log(data);
 
     try {
-        const response = await fetch(`${API_BASE_URL}/v1/random`, {
+        const response = await fetch(`${API_BASE_URL}/v1/random/default`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

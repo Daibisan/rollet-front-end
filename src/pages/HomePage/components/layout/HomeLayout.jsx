@@ -45,7 +45,7 @@ export default function HomeLayout() {
                 ]
             }
         ],
-        "total": 1
+        "total": 2
     });
 
     return (
