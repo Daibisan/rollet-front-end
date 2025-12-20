@@ -23,15 +23,15 @@ export default function AppRouter() {
             </Route>
             <Route
                 path="/login"
-                element={<LoginPage layoutType={AUTH_LAYOUT.LOGIN} />}
+                element={<LoginPage layoutType={AUTH_LAYOUT.LOGIN} key={"login"} />}
             />
             <Route
                 path="/signup"
-                element={<LoginPage layoutType={AUTH_LAYOUT.SIGNUP} />}
+                element={<LoginPage layoutType={AUTH_LAYOUT.SIGNUP} key={"signup"}/>}
             />
             <Route
                 path="/forgot-password"
-                element={<LoginPage layoutType={AUTH_LAYOUT.FORGOT} />}
+                element={<LoginPage layoutType={AUTH_LAYOUT.FORGOT} key={"forgot-pw"}/>}
             />
         </Routes>
     );

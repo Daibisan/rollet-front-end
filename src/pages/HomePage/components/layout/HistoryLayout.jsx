@@ -3,6 +3,11 @@ import HistoryList from "../widgets/HistoryList";
 import ConfirmationPopup from "../sections/ConfirmationPopup";
 
 export default function HistoryLayout() {
+    // fetch("/v1/people/history", {
+    //     headers: {
+    //         Authorization: `Bearer ${getToken()}`,
+    //     },
+    // });
     const [isShowing, setIsShowing] = useState(false);
 
     function deleteBtnHandler(e) {
