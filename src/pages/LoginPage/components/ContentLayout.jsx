@@ -37,7 +37,7 @@ export default function ContentLayout({ layoutType }) {
                 />
 
                 {/* or */}
-                {!isForgot && <p className="mt-10 text-4xl">or</p>}
+                {!isForgot && <p className={`text-4xl ${isLogin ? 'mt-6' : 'mt-2'}`}>or</p>}
 
                 <GoogleBtn isForgot={isForgot} />
 

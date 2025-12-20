@@ -6,7 +6,7 @@ import Cloud from "@/components/ui/Cloud";
 export default function index({ layoutType }) {
     return (
         // body
-        <div className="relative flex h-full overflow-hidden px-16 py-8">
+        <div className="relative flex h-full overflow-hidden px-16 py-6">
             {/* wrapper */}
             <div className="flex w-full flex-col gap-22 font-[rubik-one]">
                 <header>
