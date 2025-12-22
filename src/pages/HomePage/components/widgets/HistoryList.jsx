@@ -12,43 +12,46 @@ export default function HistoryList({ deleteBtnHandler }) {
             const data = await fetchHistory();
             setHistory(data);
         })();
-
     }, []);
 
     return (
         <>
             {history.map((teams, i) => {
                 return (
-                    <li className="w-full max-w-[258px] z-20" key={i}>
-                        <div className="bg-secondary-blue dark:bg-light-purple-sky flex min-h-[183px] w-full justify-end rounded-4xl pt-3 pr-6">
+                    <li className="z-20 w-full max-w-[292px]" key={i}>
+                        <div className="flex min-h-[183px] w-full justify-end rounded-xl bg-white pt-3 pr-6 select-none"></div>
+                        <div className="bg-secondary-blue dark:bg-light-purple-sky mt-1 flex justify-around rounded-xl py-5 relative bottom-5">
+                            {/* Download button */}
                             <button
-                                className="h-max"
-                                onClick={() => exportCsvHandler(teams, i+1)}
+                                className="h-max select-none"
+                                onClick={() => exportCsvHandler(teams, i + 1)}
                             >
                                 <img
                                     src={download_icon}
                                     alt="Download"
-                                    width={"26px"}
-                                    className="cursor-pointer select-none"
+                                    width={"30px"}
+                                    height={"30px"}
+                                    className="cursor-pointer"
                                 />
                             </button>
-                        </div>
-                        <div className="mt-1 flex justify-center">
-                            <p className="relative flex items-center font-[rubik-spray]">
-                                Result {i+1}
-                                <button
-                                    className="absolute -right-9 cursor-pointer"
-                                    data-index={i}
-                                    onClick={deleteBtnHandler}
-                                >
-                                    <img
-                                        src={trash_black_icon}
-                                        alt="3dots"
-                                        width={"22px" }
-                                        className="select-none"
-                                    />
-                                </button>
+
+                            <p className="flex items-center font-[rubik-spray]">
+                                Project {i + 1}
                             </p>
+
+                            {/* Delete Button */}
+                            <button
+                                className="cursor-pointer select-none"
+                                data-index={i}
+                                onClick={deleteBtnHandler}
+                            >
+                                <img
+                                    src={trash_black_icon}
+                                    alt="3dots"
+                                    width={"30px"}
+                                    height={"30px"}
+                                />
+                            </button>
                         </div>
                     </li>
                 );

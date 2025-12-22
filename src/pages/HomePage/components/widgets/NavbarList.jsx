@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import home_icon from '@/assets/img/logo/Home.svg';
-import clock_icon from '@/assets/img/logo/Clock.svg';
-import settings_icon from '@/assets/img/logo/Settings.svg';
+import home_icon from "@/assets/img/logo/Home.svg";
+import clock_icon from "@/assets/img/logo/Clock.svg";
+import settings_icon from "@/assets/img/logo/Settings.svg";
 
 export default function NavbarList() {
     const location = useLocation();
@@ -11,14 +11,13 @@ export default function NavbarList() {
             <li>
                 <Link
                     to="/home"
-                    className={`flex gap-3 rounded-full ${location.pathname === "/home" ? hover_bgColor : ""} px-4.5 py-3`}
+                    className={`flex gap-3 rounded-full ${location.pathname === "/home" ? hover_bgColor : ""} px-4.5 py-3 select-none`}
                 >
                     <img
                         src={home_icon}
                         alt="Home"
                         width={"39px"}
                         draggable={false}
-                        className="select-none"
                     />
                     <p className="flex items-center">Home</p>
                 </Link>
@@ -26,14 +25,13 @@ export default function NavbarList() {
             <li className="mb-44">
                 <Link
                     to="/home/history"
-                    className={`flex gap-3 rounded-full ${location.pathname === "/home/history" ? hover_bgColor : ""} px-4.5 py-3`}
+                    className={`flex gap-3 rounded-full ${location.pathname === "/home/history" ? hover_bgColor : ""} px-4.5 py-3 select-none`}
                 >
                     <img
                         src={clock_icon}
                         alt="Clock"
                         width={"33px"}
                         draggable={false}
-                        className="select-none"
                     />
                     <p className="flex items-center">History</p>
                 </Link>
@@ -41,14 +39,13 @@ export default function NavbarList() {
             <li className="-ml-1">
                 <Link
                     to="/home/settings"
-                    className={`flex gap-1 rounded-full ${location.pathname === "/home/settings" ? hover_bgColor : ""} px-4 py-2 text-[20px]`}
+                    className={`flex gap-1 rounded-full ${location.pathname === "/home/settings" ? hover_bgColor : ""} px-4 py-2 text-[20px] select-none`}
                 >
                     <img
                         src={settings_icon}
                         alt="Settings"
                         width={"42px"}
                         draggable={false}
-                        className="select-none"
                     />
                     <p className="flex items-center">Settings</p>
                 </Link>

@@ -44,7 +44,7 @@ export default function Home() {
                     width={570}
                     height={525}
                     draggable={false}
-                    className={`fixed z-10 ${location === "/home" ? "translate-x-72" : "-bottom-48 translate-x-158 rotate-28"}`}
+                    className={`fixed z-10 ${location === "/home" ? "translate-x-72" : "-bottom-48 -right-48 rotate-28"}`}
                 />
             )}
 

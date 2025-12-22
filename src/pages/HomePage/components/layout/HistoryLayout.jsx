@@ -12,8 +12,8 @@ export default function HistoryLayout() {
 
     return (
         <>
-            <div className="ml-8 h-full pt-18">
-                <ul className="flex max-h-[490px] flex-wrap gap-x-19 gap-y-15 overflow-y-auto rounded-4xl min-[943px]:max-[1277px]:w-[615px] md:max-[943px]:gap-x-10 md:max-[907px]:w-[280px]">
+            <div className="ml-4 h-full pt-18">
+                <ul className="z-20 flex max-h-[560px] flex-wrap gap-7 overflow-y-auto px-2 min-[943px]:max-[1277px]:w-[615px] md:max-[907px]:w-[280px]">
                     <HistoryList deleteBtnHandler={deleteBtnHandler} />
                 </ul>
             </div>

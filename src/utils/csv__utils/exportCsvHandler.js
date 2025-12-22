@@ -35,7 +35,7 @@ export default function exportCsvHandler(newTeams, history_index = null) {
 
         link.download = "Teams_exported.csv";
         if (history_index) {
-            link.download = `History${history_index}_exported.csv`;
+            link.download = `Project${history_index}_exported.csv`;
         }
         link.click();
     }
