@@ -25,13 +25,13 @@ export default function OurTeam({ teams : newTeams }) {
     //     "total": 2
     // }
     return (
-        <aside className="flex-[1.1] pt-6">
+        <aside className="flex-[1.1] pt-6 z-20">
             {/* Our team header */}
             <header className="relative">
                 {/* Donwload btn */}
                 <button
                     onClick={() => exportCsvHandler(newTeams)}
-                    className="bg-main-blue absolute -left-14 flex cursor-pointer items-center justify-center rounded-full p-2"
+                    className="bg-main-blue dark:bg-dark-purple-sky absolute -left-14 flex cursor-pointer items-center justify-center rounded-full p-2"
                 >
                     <img
                         src={download_logo}
@@ -43,7 +43,7 @@ export default function OurTeam({ teams : newTeams }) {
                     />
                 </button>
 
-                <h3 className="bg-main-blue rounded-full pb-2 text-center text-4xl text-white">
+                <h3 className="bg-main-blue dark:bg-dark-purple-sky rounded-full pb-2 text-center text-4xl text-white">
                     Our Team
                 </h3>
             </header>
@@ -53,7 +53,7 @@ export default function OurTeam({ teams : newTeams }) {
                 {newTeams.teams.map((item, index) => (
                     <div
                         key={index}
-                        className="bg-secondary-blue mb-6 rounded-2xl px-5 pt-2 pb-12 text-secondary-black"
+                        className="bg-secondary-blue/80 dark:bg-light-purple-sky/80 mb-6 rounded-2xl px-5 pt-2 pb-12 text-secondary-black"
                     >
                         <h4 className="text-3xl">Team {index + 1}</h4>
                         <ol className="mt-3 list-inside list-decimal text-[0.8rem] font-light">

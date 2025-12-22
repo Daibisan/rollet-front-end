@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage/Home";
 import HistoryLayout from "./pages/HomePage/components/layout/HistoryLayout";
 import SettingsLayout from "./pages/HomePage/components/layout/SettingsLayout";
 import HomeLayout from "./pages/HomePage/components/layout/HomeLayout";

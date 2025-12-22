@@ -5,12 +5,13 @@ import settings_icon from '@/assets/img/logo/Settings.svg';
 
 export default function NavbarList() {
     const location = useLocation();
+    const hover_bgColor = "bg-secondary-blue dark:bg-light-purple-sky";
     return (
-        <ul>
+        <ul className="transition-colors duration-500">
             <li>
                 <Link
                     to="/home"
-                    className={`flex gap-3 rounded-full ${location.pathname === "/home" ? "bg-secondary-blue" : ""} px-4.5 py-3`}
+                    className={`flex gap-3 rounded-full ${location.pathname === "/home" ? hover_bgColor : ""} px-4.5 py-3`}
                 >
                     <img
                         src={home_icon}
@@ -25,7 +26,7 @@ export default function NavbarList() {
             <li className="mb-44">
                 <Link
                     to="/home/history"
-                    className={`flex gap-3 rounded-full ${location.pathname === "/home/history" ? "bg-secondary-blue" : ""} px-4.5 py-3`}
+                    className={`flex gap-3 rounded-full ${location.pathname === "/home/history" ? hover_bgColor : ""} px-4.5 py-3`}
                 >
                     <img
                         src={clock_icon}
@@ -40,7 +41,7 @@ export default function NavbarList() {
             <li className="-ml-1">
                 <Link
                     to="/home/settings"
-                    className={`flex gap-1 rounded-full ${location.pathname === "/home/settings" ? "bg-secondary-blue" : ""} px-4 py-2 text-[20px]`}
+                    className={`flex gap-1 rounded-full ${location.pathname === "/home/settings" ? hover_bgColor : ""} px-4 py-2 text-[20px]`}
                 >
                     <img
                         src={settings_icon}

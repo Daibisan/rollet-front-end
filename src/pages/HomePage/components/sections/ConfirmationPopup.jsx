@@ -20,7 +20,7 @@ export default function ConfirmationPopup({
 
                 {/* content */}
                 <div
-                    className="bg-secondary-blue relative flex flex-col gap-13 rounded-4xl px-6 py-16 text-center text-white"
+                    className="bg-secondary-blue dark:bg-light-purple-sky relative flex flex-col gap-13 rounded-4xl px-6 py-16 text-center text-white"
                     onClick={(e) => e.stopPropagation()}
                 >
                     {/* "Are you sure?" */}

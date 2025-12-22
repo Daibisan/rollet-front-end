@@ -61,12 +61,21 @@ body,
     --color-secondary-gray: hsla(0, 0%, 33%, 1);
     --color-third-gray: hsla(0, 0%, 85%, 1);
 
+    --color-gray-border: hsla(0, 0%, 46%, 1);
+
     --color-main-blue: hsla(214, 100%, 75%, 1);
     --color-secondary-blue: hsla(211, 100%, 91%, 1);
+    --color-blue-sky: hsla(206, 100%, 84%, 1);
 
     --color-main-red: hsla(0, 100%, 66%, 1);
 
     --color-main-green: hsla(135, 59%, 49%, 1);
 
-    --color-main-blue: hsla(217, 86%, 60%, 1);
+    --color-yellow-sky: hsla(62, 100%, 89%, 1);
+
+    --color-dark-purple-sky: hsla(259, 100%, 19%, 1);
+    --color-purple-sky: hsla(259, 59%, 54%, 1);
+    --color-light-purple-sky: hsla(259, 100%, 94%, 1);
 }
+
+@custom-variant dark (&:where(.dark, .dark *));

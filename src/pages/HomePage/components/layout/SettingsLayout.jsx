@@ -3,17 +3,21 @@ import trash_red from "@/assets/img/logo/trash_red.svg";
 import arrow from "@/assets/img/logo/keyboard_arrow_up.svg";
 import { useState } from "react";
 import ConfirmationPopup from "../sections/ConfirmationPopup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 export default function SettingsLayout() {
-    const [isToggled, setIsToggled] = useState(false);
     const [isShowing, setIsShowing] = useState(false);
+    const { darkMode, setDarkMode } = useOutletContext();
     const navigate = useNavigate();
+
+    function darkModeHandler() {
+        setDarkMode(!darkMode) //update darkMode state
+    }
 
     return (
         <div className="flex h-full">
             {/* Button List */}
-            <div className="mt-35 flex-[1.3]">
+            <div className="mt-35 flex-[1.3] z-20">
                 {/* dark mode btn section */}
                 <div className="bg-secondary-blue flex justify-around gap-6 rounded-full p-3">
                     <div className="flex gap-8">
@@ -27,8 +31,8 @@ export default function SettingsLayout() {
 
                     {/* Toggle btn */}
                     <button
-                        className={`flex h-max w-[58px] min-w-[58px] cursor-pointer items-center self-center rounded-full p-1 ${isToggled ? "bg-main-green justify-end" : "bg-secondary-gray justify-start"} transition-all`}
-                        onClick={() => setIsToggled(!isToggled)}
+                        className={`flex h-max w-[58px] min-w-[58px] cursor-pointer items-center self-center rounded-full p-1 ${darkMode ? "bg-main-green justify-end" : "bg-secondary-gray justify-start"} transition-all`}
+                        onClick={darkModeHandler}
                     >
                         <div className="h-[27px] w-[27px] rounded-full bg-white"></div>
                     </button>
@@ -67,7 +71,7 @@ export default function SettingsLayout() {
             </div>
 
             {/* BIG DOG IMAGE */}
-            <div className="flex flex-2 items-end justify-end">
+            <div className="flex flex-2 items-end justify-end z-20">
                 <img
                     src={anjing_merem}
                     alt="anjing_merem"

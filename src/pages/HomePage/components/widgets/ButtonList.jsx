@@ -49,7 +49,7 @@ export default function ButtonList({ setPopUpClosed, addPerson }) {
         <div className="flex items-center gap-2">
             {/* Add button */}
             <button
-                className="w-max cursor-pointer rounded-full bg-main-blue px-15 py-3 text-center text-3xl text-white"
+                className="w-max cursor-pointer rounded-full bg-main-blue dark:bg-dark-purple-sky px-15 py-3 text-center text-3xl text-white"
                 onClick={() => setPopUpClosed(false)}
             >
                 Add
@@ -58,7 +58,7 @@ export default function ButtonList({ setPopUpClosed, addPerson }) {
             {/* Upload button */}
             <label
                 htmlFor="csv-input"
-                className="flex p-2 cursor-pointer items-center justify-center rounded-full bg-main-blue select-none"
+                className="flex p-2 cursor-pointer items-center justify-center rounded-full bg-main-blue dark:bg-dark-purple-sky select-none"
             >
                 <img src={upload_icon} alt="Upload" width={"36px"} draggable={false}/>
             </label>

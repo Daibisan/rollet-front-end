@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <>
             {/* header and logo */}
-            <div className="bg-secondary-blue absolute z-30 flex w-full flex-col rounded-3xl pt-6 pr-5 pl-5 text-secondary-black">
+            <div className="bg-secondary-blue dark:bg-dark-purple-sky absolute z-20 flex w-full flex-col rounded-4xl pt-6 pr-5 pl-5 text-secondary-black dark:text-white transition-colors duration-500">
                 {/* welcome [name] */}
                 <h2 className="mb-6 text-[32px] leading-none">
                     Welcome

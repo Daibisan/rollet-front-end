@@ -9,10 +9,10 @@ export default function SpinnerContainer({ setTeams, setPersons, persons }) {
     const [teamCount, setTeamCount] = useState(2);
 
     async function displayTeamsHandler() {
-        if (persons[0].person_role === '-') {
+        if (persons[0].person_role === "-") {
             alert("Nama tidak boleh kosong");
             return;
-        };
+        }
 
         const result = await randomize(persons, teamCount);
         setTeams(result);
@@ -58,7 +58,7 @@ export default function SpinnerContainer({ setTeams, setPersons, persons }) {
             {/* inner */}
             <div className="flex w-full max-w-[324px] flex-col justify-center gap-5">
                 {/* Spinning animation box*/}
-                <img src={dog_gacha_img} alt="dog_gacha_img" />
+                <img src={dog_gacha_img} alt="dog_gacha_img" className="z-20" />
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-2">
@@ -66,7 +66,7 @@ export default function SpinnerContainer({ setTeams, setPersons, persons }) {
                     <div className="flex items-center gap-2">
                         {/* Spin button */}
                         <button
-                            className="bg-main-blue cursor-pointer rounded-3xl px-5 pt-2 pb-4 text-center text-3xl leading-7 text-white"
+                            className="bg-main-blue dark:bg-dark-purple-sky cursor-pointer rounded-3xl px-5 pt-2 pb-4 text-center text-3xl leading-7 text-white"
                             onClick={displayTeamsHandler}
                         >
                             Randomize Team
@@ -74,7 +74,7 @@ export default function SpinnerContainer({ setTeams, setPersons, persons }) {
 
                         {/* Refresh button */}
                         <button
-                            className="bg-main-blue cursor-pointer rounded-full p-2"
+                            className="bg-main-blue dark:bg-dark-purple-sky cursor-pointer rounded-full p-2"
                             onClick={refreshBtnHandler}
                         >
                             <img
@@ -90,7 +90,7 @@ export default function SpinnerContainer({ setTeams, setPersons, persons }) {
                     {/* Lower Buttons */}
                     <div className="flex gap-1">
                         {/* Preference Button */}
-                        <button className="bg-main-blue flex flex-2 cursor-pointer items-center justify-center rounded-3xl px-4 text-3xl text-white">
+                        <button className="bg-main-blue dark:bg-dark-purple-sky flex flex-2 cursor-pointer items-center justify-center rounded-3xl px-4 text-3xl text-white">
                             <img
                                 src={edit_icon}
                                 alt="edit_icon"
@@ -101,7 +101,7 @@ export default function SpinnerContainer({ setTeams, setPersons, persons }) {
                         </button>
 
                         {/* N Team Input */}
-                        <div className="bg-main-blue flex flex-1 items-center justify-center gap-2 rounded-3xl px-4 py-2">
+                        <div className="bg-main-blue dark:bg-dark-purple-sky flex flex-1 items-center justify-center gap-2 rounded-3xl px-4 py-2">
                             <div className="flex h-full w-[50%] items-center justify-center rounded-md bg-white">
                                 <input
                                     type="text"

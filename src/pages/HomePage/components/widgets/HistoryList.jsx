@@ -19,8 +19,8 @@ export default function HistoryList({ deleteBtnHandler }) {
         <>
             {history.map((teams, i) => {
                 return (
-                    <li className="w-full max-w-[258px]" key={i}>
-                        <div className="bg-secondary-blue flex min-h-[183px] w-full justify-end rounded-4xl pt-3 pr-6">
+                    <li className="w-full max-w-[258px] z-20" key={i}>
+                        <div className="bg-secondary-blue dark:bg-light-purple-sky flex min-h-[183px] w-full justify-end rounded-4xl pt-3 pr-6">
                             <button
                                 className="h-max"
                                 onClick={() => exportCsvHandler(teams, i+1)}
