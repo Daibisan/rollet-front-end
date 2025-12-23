@@ -6,6 +6,7 @@ import AboutRollet from "./components/AboutRollet";
 import Cloud from "@/components/ui/Cloud";
 import Clouds from "@/assets/img/clouds.png";
 import anjing_melet from "@/assets/img/anjing_melet.png";
+import BackToTop from "../../components/ui/BackToTop";
 
 export default function LandingPage() {
     return (
@@ -58,6 +59,8 @@ export default function LandingPage() {
                     <Cloud width={"440px"} abs_pos={"top-23 -right-77"}/>
                 </footer>
             </div>
+
+            <BackToTop/>
         </div>
     );
 }

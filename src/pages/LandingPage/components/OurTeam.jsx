@@ -1,20 +1,29 @@
+import pp_syan from "@/assets/img/pp/pp_syan.png";
+import pp_muza from "@/assets/img/pp/pp_muza.jpg";
+import pp_dibi from "@/assets/img/pp/pp_dibi.png";
+import pp_bariza from "@/assets/img/pp/pp_bariza.jpg";
+
 export default function OurTeam() {
     const ourNames = [
         {
-            name: "Syandana Mazna Aisyah",
+            name: "Syan",
             role: "UI/UX",
+            pp: pp_syan,
         },
         {
-            name: "Muhammad Rahsya Nadibia",
+            name: "Daibi",
             role: "Front-end",
+            pp: pp_dibi,
         },
         {
-            name: "Muhammad Zalzala Al Akwan Al Mudzakir",
-            role: "Back-end",
+            name: "Muza",
+            role: "Back-end + PM",
+            pp: pp_muza,
         },
         {
-            name: "Bariza Rafi Leressae",
+            name: "Bariza",
             role: "Back-end",
+            pp: pp_bariza,
         },
     ];
 
@@ -28,7 +37,11 @@ export default function OurTeam() {
                             key={i}
                             className="flex w-full max-w-[220px] flex-col"
                         >
-                            <div className="bg-secondary-black h-[185px] rounded-4xl select-none" draggable={false}></div>
+                            <div
+                                className="h-[185px] rounded-4xl bg-cover bg-center bg-no-repeat select-none"
+                                draggable={false}
+                                style={{ backgroundImage: `url(${p.pp})` }}
+                            ></div>
                             <span className="mt-2 text-[1.3rem] leading-6">
                                 {p.name}
                             </span>

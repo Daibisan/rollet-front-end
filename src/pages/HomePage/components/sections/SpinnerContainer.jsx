@@ -58,7 +58,13 @@ export default function SpinnerContainer({ setTeams, setPersons, persons }) {
             {/* inner */}
             <div className="flex w-full max-w-[324px] flex-col justify-center gap-5">
                 {/* Spinning animation box*/}
-                <img src={dog_gacha_img} alt="dog_gacha_img" className="z-20" />
+                <img
+                    src={dog_gacha_img}
+                    alt="dog_gacha_img"
+                    className="z-20"
+                    loading="eager"
+                    decoding="async"
+                />
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-2">

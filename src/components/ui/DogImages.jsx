@@ -11,17 +11,19 @@ export default function DogImages({ face_pos, hands_pos, tail_pos }) {
                     alt="anjing_muka_datar"
                     width={"235px"}
                     loading="lazy"
+                    decoding="async"
                     draggable={false}
                 />
             </div>
 
-            <div className={`absolute z-20 -top-6 select-none ${hands_pos}`}>
+            <div className={`absolute -top-6 z-20 select-none ${hands_pos}`}>
                 <img
                     src={tangan_anjing}
                     alt="anjing_muka_datar"
                     width={"150px"}
                     loading="lazy"
                     draggable={false}
+                    decoding="async"
                 />
             </div>
             <div className={`absolute select-none ${tail_pos}`}>
@@ -31,6 +33,7 @@ export default function DogImages({ face_pos, hands_pos, tail_pos }) {
                     width={"152px"}
                     loading="lazy"
                     draggable={false}
+                    decoding="async"
                 />
             </div>
         </>

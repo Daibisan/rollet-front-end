@@ -44,7 +44,9 @@ export default function Home() {
                     width={570}
                     height={525}
                     draggable={false}
-                    className={`fixed z-10 ${location === "/home" ? "translate-x-72" : "-bottom-48 -right-48 rotate-28"}`}
+                    className={`fixed z-10 ${location === "/home" ? "translate-x-72" : "-right-48 -bottom-48 rotate-28"}`}
+                    loading="eager"
+                    decoding="async"
                 />
             )}
 
@@ -58,6 +60,8 @@ export default function Home() {
                         height={154}
                         draggable={false}
                         className={`fixed z-10 ${darkMode ? "translate-x-90 translate-y-37" : "translate-x-86 translate-y-46"}`}
+                        loading="eager"
+                        decoding="async"
                     />
                     {/* mid cloud */}
                     <img
@@ -67,6 +71,8 @@ export default function Home() {
                         height={88}
                         draggable={false}
                         className="fixed z-10 -translate-x-5 translate-y-35"
+                        loading="eager"
+                        decoding="async"
                     />
                     {/* left mid cloud */}
                     <img
@@ -76,6 +82,8 @@ export default function Home() {
                         height={88}
                         draggable={false}
                         className="fixed z-10 -translate-x-97 translate-y-105"
+                        loading="eager"
+                        decoding="async"
                     />
                     {/* left cloud */}
                     <img
@@ -85,6 +93,8 @@ export default function Home() {
                         height={88}
                         draggable={false}
                         className="fixed top-70 -left-17 z-10"
+                        loading="eager"
+                        decoding="async"
                     />
                     {/* right cloud */}
                     <img
@@ -94,6 +104,8 @@ export default function Home() {
                         height={88}
                         draggable={false}
                         className="fixed -right-12 bottom-1/3 z-10"
+                        loading="eager"
+                        decoding="async"
                     />
                 </>
             )}

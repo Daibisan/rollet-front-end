@@ -11,6 +11,8 @@ export default function RolletLogo({ location }) {
                     width={`${location === 'homePage'? '60px' : '80px'}`}
                     height={`${location === 'homePage'? '60px' : '80px'}`}
                     draggable={false}
+                    loading="eager"
+                    decoding="async"
                 />
                 <h1
                     className={`flex items-center pt-2 font-['yellow-candy'] dark:text-white ${location === "homePage" ? "text-3xl" : "text-5xl"}`}
