@@ -5,6 +5,22 @@ import exportCsvHandler from "@/utils/csv__utils/exportCsvHandler";
 import fetchHistory from "@/services/history";
 
 export default function HistoryList({ deleteBtnHandler }) {
+    //     {
+    //   "teams": [
+    //     {
+    //       "members": [
+    //         {
+    //           "id": 0,
+    //           "name": "string",
+    //           "role": "string",
+    //           "team": 0
+    //         }
+    //       ],
+    //       "team": 0
+    //     }
+    //   ],
+    //   "total": 0
+    // }
     const [history, setHistory] = useState([]);
 
     useEffect(() => {
@@ -20,7 +36,7 @@ export default function HistoryList({ deleteBtnHandler }) {
                 return (
                     <li className="z-20 w-full max-w-[292px]" key={i}>
                         <div className="flex min-h-[183px] w-full justify-end rounded-xl bg-white pt-3 pr-6 select-none"></div>
-                        <div className="bg-secondary-blue dark:bg-light-purple-sky mt-1 flex justify-around rounded-xl py-5 relative bottom-5">
+                        <div className="bg-secondary-blue dark:bg-light-purple-sky relative bottom-5 mt-1 flex justify-around rounded-xl py-5">
                             {/* Download button */}
                             <button
                                 className="h-max select-none"

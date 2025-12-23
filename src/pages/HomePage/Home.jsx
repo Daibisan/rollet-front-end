@@ -9,7 +9,6 @@ import home_cloud_dark from "@/assets/img/home_cloud_dark.png";
 
 export default function Home() {
     const location = useLocation().pathname;
-    console.log(location);
 
     const [darkMode, setDarkMode] = useState(() => {
         const isDark = localStorage.getItem("dark-mode");

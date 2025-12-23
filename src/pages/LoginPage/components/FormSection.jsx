@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
-import { register, login } from "@/services/auth.js";
 import { useState } from "react";
-import { saveToken } from "../../../utils/auth";
+import { fetch_login, fetch_register } from "../../../services/auth";
+import { useAuth } from "../../../context/AuthContext";
 
 export default function FormSection({ isForgot, isLogin, isSignup }) {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
+    const { login } = useAuth();
 
     async function handleRegist(e) {
         e.preventDefault();
 
         try {
-            const res = await register(email, name, password);
+            const res = await fetch_register(email, name, password);
             alert(res.message);
         } catch (error) {
             alert(error);
@@ -23,9 +24,9 @@ export default function FormSection({ isForgot, isLogin, isSignup }) {
         e.preventDefault();
 
         try {
-            const res = await login(email, password);
-            saveToken(res.token);
-            alert(res.message);
+            const res = await fetch_login(email, password);
+            login(res);
+            
         } catch (error) {
             alert(error);
         }

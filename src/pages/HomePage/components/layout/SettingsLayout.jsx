@@ -4,20 +4,27 @@ import arrow from "@/assets/img/logo/keyboard_arrow_up.svg";
 import { useState } from "react";
 import ConfirmationPopup from "../sections/ConfirmationPopup";
 import { useNavigate, useOutletContext } from "react-router-dom";
+import { useAuth } from "../../../../context/AuthContext";
 
 export default function SettingsLayout() {
     const [isShowing, setIsShowing] = useState(false);
     const { darkMode, setDarkMode } = useOutletContext();
     const navigate = useNavigate();
+    const { logout, isLogin } = useAuth();
 
     function darkModeHandler() {
-        setDarkMode(!darkMode) //update darkMode state
+        setDarkMode(!darkMode); //update darkMode state
+    }
+
+    function logoutHandler() {
+        logout(true);
+        navigate("/");
     }
 
     return (
         <div className="flex h-full">
             {/* Button List */}
-            <div className="mt-35 flex-[1.3] z-20">
+            <div className="z-20 mt-35 flex-[1.3]">
                 {/* dark mode btn section */}
                 <div className="bg-secondary-blue flex justify-around gap-6 rounded-full p-3">
                     <div className="flex gap-8">
@@ -39,39 +46,41 @@ export default function SettingsLayout() {
                 </div>
 
                 {/* log out btn section */}
-                <div className="bg-secondary-blue mt-4 flex justify-around gap-18 rounded-full p-3">
-                    <div className="flex gap-8">
-                        <img
-                            src={trash_red}
-                            alt="trash_red"
-                            width={"30px"}
-                            draggable={false}
-                            className="select-none"
-                        />
+                {isLogin() && (
+                    <div className="bg-secondary-blue mt-4 flex justify-around gap-18 rounded-full p-3">
+                        <div className="flex gap-8">
+                            <img
+                                src={trash_red}
+                                alt="trash_red"
+                                width={"30px"}
+                                draggable={false}
+                                className="select-none"
+                            />
 
-                        <p className="text-main-red darumadrop-one-regular pb-1 text-3xl text-nowrap">
-                            Log Out
-                        </p>
+                            <p className="text-main-red darumadrop-one-regular pb-1 text-3xl text-nowrap">
+                                Log Out
+                            </p>
+                        </div>
+
+                        {/* Logout btn */}
+                        <button
+                            className="cursor-pointer"
+                            onClick={() => setIsShowing(!isShowing)}
+                        >
+                            <img
+                                src={arrow}
+                                alt="arrow"
+                                width={"35px"}
+                                draggable={false}
+                                className="select-none"
+                            />
+                        </button>
                     </div>
-
-                    {/* Logout btn */}
-                    <button
-                        className="cursor-pointer"
-                        onClick={() => setIsShowing(!isShowing)}
-                    >
-                        <img
-                            src={arrow}
-                            alt="arrow"
-                            width={"35px"}
-                            draggable={false}
-                            className="select-none"
-                        />
-                    </button>
-                </div>
+                )}
             </div>
 
             {/* BIG DOG IMAGE */}
-            <div className="flex flex-2 items-end justify-end z-20">
+            <div className="z-20 flex flex-2 items-end justify-end">
                 <img
                     src={anjing_merem}
                     alt="anjing_merem"
@@ -86,7 +95,7 @@ export default function SettingsLayout() {
                 type={"logout"}
                 isShowing={isShowing}
                 setIsShowing={setIsShowing}
-                continueCallback={() => navigate("/")}
+                continueCallback={logoutHandler}
             />
         </div>
     );

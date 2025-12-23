@@ -1,8 +1,11 @@
 import anjing_melet from '@/assets/img/anjing_melet.png';
 import tangan_anjing from '@/assets/img/tangan_anjing.png';
 import NavbarList from '../widgets/NavbarList';
+import { useAuth } from '@/context/AuthContext';
 
 export default function Navbar() {
+    const { user } = useAuth();
+    
     return (
         <>
             {/* header and logo */}
@@ -10,7 +13,7 @@ export default function Navbar() {
                 {/* welcome [name] */}
                 <h2 className="mb-6 text-[32px] leading-none">
                     Welcome
-                    <span className="block text-2xl">Guest</span>
+                    <span className="block text-2xl">{user? user.name.split(' ')[0] : 'Guest'}</span>
                 </h2>
 
                 {/* dog image */}

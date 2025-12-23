@@ -1,4 +1,5 @@
 import { API_BASE_URL } from "@/config/api.js";
+import { getToken, isLogin } from "../utils/auth";
 
 export default async function randomize(persons, team_count) {
     //     {
@@ -16,16 +17,23 @@ export default async function randomize(persons, team_count) {
     });
     const data = {
         people: newPersons,
-        team_count
+        team_count,
     };
     // console.log(data);
 
     try {
-        const response = await fetch(`${API_BASE_URL}/v1/random/default`, {
+        const headers = {
+            "Content-Type": "application/json",
+        };
+
+        if (isLogin()) {
+            const token = getToken();
+            headers.Authorization = `Bearer ${token}`;
+        }
+
+        const response = await fetch(`${API_BASE_URL}/v1/user/random/default`, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers,
             body: JSON.stringify(data),
         });
 

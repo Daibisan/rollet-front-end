@@ -9,7 +9,7 @@ async function handleResponse(res) {
     return data;
 }
 
-export async function register(email, name, password) {
+export async function fetch_register(email, name, password) {
     const res = await fetch(`${API_BASE_URL}/v1/auth/register`, {
         method: "POST",
         headers: {
@@ -21,7 +21,7 @@ export async function register(email, name, password) {
     return handleResponse(res);
 }
 
-export async function login(email, password) {
+export async function fetch_login(email, password) {
     const res = await fetch(`${API_BASE_URL}/v1/auth/login`, {
         method: "POST",
         headers: {
