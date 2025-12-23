@@ -1,5 +1,5 @@
 import RolletLogo from "@/components/ui/RolletLogo.jsx";
-import AppVersion from "../../components/ui/AppVersion";
+import AppVersion from "@/components/ui/AppVersion";
 import ContentLayout from "./components/ContentLayout";
 import Cloud from "@/components/ui/Cloud";
 
