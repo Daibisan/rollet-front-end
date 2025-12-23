@@ -22,7 +22,7 @@ export default function OurTeam() {
         },
         {
             name: "Bariza",
-            role: "Back-end",
+            role: "Anggota",
             pp: pp_bariza,
         },
     ];
