@@ -5,7 +5,7 @@ export default function BackToTop() {
 
     useEffect(() => {
         const onScroll = () => {
-            setShow(window.scrollY > 5000); // muncul setelah 300px
+            setShow(window.scrollY > 1000); // muncul setelah 300px
         };
 
         window.addEventListener("scroll", onScroll);
