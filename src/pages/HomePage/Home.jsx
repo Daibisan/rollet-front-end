@@ -25,7 +25,7 @@ export default function Home() {
         <div
             className={`from-blue-sky to-yellow-sky dark:from-dark-purple-sky dark:via-purple-sky dark:to-yellow-sky relative flex h-full justify-center bg-linear-to-b/srgb via-white px-4 dark:via-50% dark:to-95% ${darkMode ? "dark" : ""} items-center transition-colors duration-400`}
         >
-            <div className="darumadrop-one-regular flex h-[688px] w-full max-w-[1250px] gap-12 border">
+            <div className="darumadrop-one-regular flex h-[688px] w-full max-w-[1250px] gap-12">
                 <aside className="border-gray-border relative z-20 w-full max-w-[220px] rounded-[38px] border-5 bg-white">
                     <Navbar />
                 </aside>
