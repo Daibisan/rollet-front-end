@@ -23,9 +23,9 @@ export default function Home() {
 
     return (
         <div
-            className={`from-blue-sky to-yellow-sky dark:from-dark-purple-sky dark:via-purple-sky dark:to-yellow-sky relative flex h-full justify-center bg-linear-to-b/srgb via-white px-4 dark:via-50% dark:to-95% ${darkMode ? "dark" : ""} transition-colors duration-400`}
+            className={`from-blue-sky to-yellow-sky dark:from-dark-purple-sky dark:via-purple-sky dark:to-yellow-sky relative flex h-full justify-center bg-linear-to-b/srgb via-white px-4 dark:via-50% dark:to-95% ${darkMode ? "dark" : ""} items-center transition-colors duration-400`}
         >
-            <div className="darumadrop-one-regular mt-8 mb-8 flex w-full max-w-[1250px] gap-12">
+            <div className="darumadrop-one-regular flex h-[688px] w-full max-w-[1250px] gap-12 border">
                 <aside className="border-gray-border relative z-20 w-full max-w-[220px] rounded-[38px] border-5 bg-white">
                     <Navbar />
                 </aside>
@@ -43,7 +43,7 @@ export default function Home() {
                     width={570}
                     height={525}
                     draggable={false}
-                    className={`fixed z-10 ${location === "/home" ? "translate-x-72" : "-right-48 -bottom-48 rotate-28"}`}
+                    className={`fixed z-10 ${location === "/home" ? "translate-x-72 -translate-y-36" : "-right-48 -bottom-48 rotate-28"}`}
                     loading="eager"
                     decoding="async"
                 />
@@ -58,7 +58,7 @@ export default function Home() {
                         width={darkMode ? 336 : 280}
                         height={154}
                         draggable={false}
-                        className={`fixed z-10 ${darkMode ? "translate-x-90 translate-y-37" : "translate-x-86 translate-y-46"}`}
+                        className={`fixed z-10 ${darkMode ? "translate-x-90 translate-y-37" : "translate-x-90 -translate-y-23"}`}
                         loading="eager"
                         decoding="async"
                     />
@@ -69,7 +69,7 @@ export default function Home() {
                         width={160}
                         height={88}
                         draggable={false}
-                        className="fixed z-10 -translate-x-5 translate-y-35"
+                        className="fixed z-10 -translate-x-5 -translate-y-48"
                         loading="eager"
                         decoding="async"
                     />
@@ -80,7 +80,7 @@ export default function Home() {
                         width={160}
                         height={88}
                         draggable={false}
-                        className="fixed z-10 -translate-x-97 translate-y-105"
+                        className="fixed z-10 -translate-x-97 translate-y-20"
                         loading="eager"
                         decoding="async"
                     />
