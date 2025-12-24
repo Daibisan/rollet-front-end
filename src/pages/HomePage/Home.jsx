@@ -29,7 +29,7 @@ export default function Home() {
                 <aside className="border-gray-border relative z-20 w-full max-w-[220px] rounded-[38px] border-5 bg-white h-[668px]">
                     <Navbar />
                 </aside>
-                <main className="w-full mb-18">
+                <main className="w-full">
                     <Outlet context={{ darkMode, setDarkMode }} />
                 </main>
             </div>
