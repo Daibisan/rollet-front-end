@@ -19,7 +19,7 @@ export default function BackToTop() {
     return (
         <button
             onClick={scrollTop}
-            className={`bg-main-gray border-gray fixed bottom-6 left-6 rounded-full border-2 px-5 py-3 text-white transition-all duration-300 ${show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"} hover:border-secondary-gray hover:text-secondary-gray scale-110 cursor-pointer`}
+            className={`bg-main-gray border-gray fixed top-1/2 right-10 rounded-full border-2 px-4 py-2 scale-140 text-white transition-all duration-300 ${show ? "-translate-y-1/2 opacity-100" : "pointer-events-none translate-y-4 opacity-0"} hover:border-secondary-gray hover:text-secondary-gray scale-110 cursor-pointer`}
         >
             ↑
         </button>

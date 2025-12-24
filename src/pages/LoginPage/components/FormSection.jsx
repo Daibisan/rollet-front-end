@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { fetch_login, fetch_register } from "../../../services/auth";
 import { useAuth } from "../../../context/AuthContext";
@@ -8,6 +8,7 @@ export default function FormSection({ isForgot, isLogin, isSignup }) {
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     const { login } = useAuth();
+    const navigate = useNavigate();
 
     async function handleRegist(e) {
         e.preventDefault();
@@ -15,6 +16,7 @@ export default function FormSection({ isForgot, isLogin, isSignup }) {
         try {
             const res = await fetch_register(email, name, password);
             alert(res.message);
+            navigate('/login');
         } catch (error) {
             alert(error);
         }
