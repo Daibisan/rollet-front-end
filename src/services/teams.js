@@ -25,16 +25,13 @@ export default async function randomize(persons, team_count) {
         const headers = {
             "Content-Type": "application/json",
         };
-        const url = `${API_BASE_URL}/v1${isLogin() ? "/user" : ""}/random/default`;
 
         if (isLogin()) {
             const token = getToken();
             headers.Authorization = `Bearer ${token}`;
         }
 
-        console.log(headers);
-
-        const response = await fetch(url, {
+        const response = await fetch(`${API_BASE_URL}/v1/user/random/default`, {
             method: "POST",
             headers,
             body: JSON.stringify(data),
@@ -45,7 +42,7 @@ export default async function randomize(persons, team_count) {
         }
 
         const responseData = await response.json();
-        // console.log("Success:", responseData);
+        console.log("Success:", responseData);
         return responseData;
     } catch (error) {
         console.error("Error sending data:", error);
