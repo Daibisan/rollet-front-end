@@ -31,7 +31,10 @@ export default async function randomize(persons, team_count) {
             headers.Authorization = `Bearer ${token}`;
         }
 
-        const response = await fetch(`${API_BASE_URL}/v1/user/random/default`, {
+        const url = isLogin()
+            ? `${API_BASE_URL}/v1/user/random/default`
+            : `${API_BASE_URL}/v1/random/default`;
+        const response = await fetch(url, {
             method: "POST",
             headers,
             body: JSON.stringify(data),

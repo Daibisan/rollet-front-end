@@ -14,8 +14,12 @@ export default function SpinnerContainer({ setTeams, setPersons, persons }) {
             return;
         }
 
-        const result = await randomize(persons, teamCount);
-        setTeams(result);
+        try {
+            const result = await randomize(persons, teamCount);
+            setTeams(result);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     function refreshBtnHandler() {

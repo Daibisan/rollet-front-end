@@ -58,7 +58,7 @@ export default function Home() {
                         width={darkMode ? 336 : 280}
                         height={154}
                         draggable={false}
-                        className={`fixed z-10 ${darkMode ? "translate-x-90 translate-y-37" : "translate-x-90 -translate-y-23"}`}
+                        className={`fixed z-10 ${darkMode ? "translate-x-90" : "translate-x-90"} -translate-y-23`}
                         loading="eager"
                         decoding="async"
                     />
